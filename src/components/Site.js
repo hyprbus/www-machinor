@@ -2,7 +2,7 @@ import React from 'react'
 function Site () {
   return (
     <div>
-      Hello Machinor lovers!
+      Hello Machinor lovers! Unite!
     </div>
   )
 }
