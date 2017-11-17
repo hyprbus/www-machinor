@@ -2,7 +2,8 @@ import React from 'react'
 function Site () {
   return (
     <div>
-      Hello Machinor lovers! Unite!
+      <h1>Machinor</h1>
+      <div>Hello Machinor lovers! Love your code!</div>
     </div>
   )
 }
