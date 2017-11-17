@@ -1,6 +1,7 @@
 // webpack.config.js
 const CopyWebpackPlugin = require('copy-webpack-plugin');
 const CleanWebpackPlugin = require('clean-webpack-plugin');
+var HtmlWebpackPlugin = require('html-webpack-plugin');
 
 module.exports = {
   // Tell webpack to start bundling our app at app/index.js
@@ -23,10 +24,13 @@ module.exports = {
   // Since Webpack only understands JavaScript, we need to
   // add a plugin to tell it how to handle html files.   
   plugins: [
+    new HtmlWebpackPlugin({
+      template: 'index.template.ejs',
+      inject: 'body'
+    }),
     new CleanWebpackPlugin(['build']),
     new CopyWebpackPlugin([
-      {from:'src/images',to:'images'},
-      {from:'src/index.html'}
+      {from:'src/images',to:'images'}
   ])
   ]
 }
