@@ -1,13 +1,12 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import styled from 'styled-components'
-import settings from './appSettings.js'
 
 const Ingress = (props) => {
   const { text } = props
   return (
-    <div>
-      {text + settings.accentColor}
+    <div className={props.className}>
+      {text}
     </div>
   )
 }
@@ -17,5 +16,6 @@ Ingress.propTypes = {
 }
 
 export default styled(Ingress)`
-font-size: 1em;
+  font-family: ${props => props.theme.textFont}, ${props => props.theme.fallbackFont};
+  font-size: 1em;
 `

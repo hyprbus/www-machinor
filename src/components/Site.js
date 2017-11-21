@@ -1,7 +1,9 @@
 import React from 'react'
 import Logo from './Logo.js'
 import Ingress from './Ingress.js'
-import Heading from './Heading.js'
+import Heading from './Heading.jsx'
+import theme from './appSettings'
+import {ThemeProvider} from 'styled-components'
 
 function Site () {
   const ingress = `I build tiny machines out of bits: web applications that run in the cloud.
@@ -9,12 +11,14 @@ function Site () {
   Technologies and tools I use: React, Node.js, Webpack, Git, Azure, Docker
   `
   return (
-    <div>
-      <Logo color="#dddddd" />
-      <Heading text="About" />
-      <Ingress text={ingress} />
-      <div>Hello Machinor lovers! Love your code!</div>
-    </div>
+    <ThemeProvider theme={theme}>
+      <div>
+        <Logo color="#dddddd" />
+        <Heading text="About" />
+        <Ingress text={ingress} />
+        <div>Hello Machinor lovers! Love your code!</div>
+      </div>
+    </ThemeProvider>
   )
 }
 export default Site

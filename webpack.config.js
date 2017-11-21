@@ -19,7 +19,13 @@ module.exports = {
       test: /\.js$/,
       exclude: /node_modules/,
       loader: 'babel-loader'
-    }]
+    },
+    {
+      test: /\.jsx$/,
+      exclude: /node_modules/,
+      loader: 'babel-loader'
+    }
+    ]
   },
   // Since Webpack only understands JavaScript, we need to
   // add a plugin to tell it how to handle html files.   

@@ -1,7 +1,6 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import styled from 'styled-components'
-import settings from './appSettings.js'
 
 const Heading = (props) => {
   return (
@@ -16,6 +15,8 @@ Heading.propTypes = {
 }
 
 export default styled(Heading)`
-  color: ${settings.accentColor};
+  font-family: ${props => props.theme.headerFont};
+  color: ${props => props.theme.accentColor};
   font-size: 2em;
+  font-weight: bold;
 `
