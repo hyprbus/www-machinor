@@ -1,6 +1,6 @@
 // application-specific settings
 
-const theme = {
+export const theme = {
   mainColor: "#ffffff",
   backgroundColorA: "#8a1d7d",
   backgroundColorB: "#5f5e33",
@@ -10,4 +10,4 @@ const theme = {
   fallbackFont: "sans-serif"
 }
 
-export default theme
+export const contentSource = "../data/content.json"

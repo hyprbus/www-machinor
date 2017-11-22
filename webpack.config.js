@@ -36,7 +36,8 @@ module.exports = {
     }),
     new CleanWebpackPlugin(['build']),
     new CopyWebpackPlugin([
-      {from:'src/images',to:'images'}
+      {from:'src/images',to:'images'},
+      {from:'src/data',to:'data'}
   ])
   ]
 }
