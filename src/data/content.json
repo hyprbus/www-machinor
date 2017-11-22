@@ -1,0 +1,32 @@
+[
+  {
+      "id": "1",
+      "text": "Tiny machines out of bits",
+      "language": "en" 
+  },
+  {
+    "id": "2",
+    "text": "About",
+    "language": "en" 
+  },
+  {
+    "id": "3",
+    "text": "This is the main text blurb to catch your attention",
+    "language": "en" 
+  },
+  {
+    "id": "1",
+    "text": "Pieniä bittikoneita",
+    "language": "fi" 
+  },
+  {
+    "id": "2",
+    "text": "Machinorista",
+    "language": "fi" 
+  },
+  {
+    "id": "3",
+    "text": "Tänne tulee pitkä teksti. Erittäin, erittäin pitkä.",
+    "language": "fi" 
+  }
+]
