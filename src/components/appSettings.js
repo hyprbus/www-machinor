@@ -1,5 +1,6 @@
 // application-specific settings
 
+// visual theme
 export const theme = {
   mainColor: "#ffffff",
   backgroundColorA: "#8a1d7d",
@@ -7,7 +8,13 @@ export const theme = {
   accentColor: "#fe731c",
   textFont: "Roboto",
   headerFont: "Roboto",
-  fallbackFont: "sans-serif"
+  fallbackFont: "sans-serif",
+  columnMargin: "0px",
+  columnPadding: "5px"
 }
 
-export const contentSource = "../data/content.json"
+// text content in different languages
+export const CONTENTSOURCE = "../data/content.json"
+
+// available languages
+export const LANGUAGES = ["en", "fi", "sv"]

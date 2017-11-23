@@ -10,16 +10,24 @@ export default class GetContent extends Component {
   constructor(props) {
     super(props)
     this.state = {
-      content: []
+      content: [],
+      language: "en"
     }
     this.getTextContent = this.getTextContent.bind(this)
   }
 
   getTextContent(source, language) {
     readFile(source, (data) => {
-      let filteredContent = data.filter(text => text.language === language)
+      let filteredContent = []
+      for (let i = 0; i < data.length; i++ ) {
+        let langObj = {}
+        langObj.id = data[i].id
+        langObj.text = data[i][language]
+        filteredContent.push(langObj)
+      }
       this.setState({
-        content: filteredContent
+        content: filteredContent,
+        language: language
       })
     })
   }
@@ -29,7 +37,11 @@ export default class GetContent extends Component {
   }
   render() {
     return (
-      <Layout content={this.state.content} />
+      <Layout 
+        content={this.state.content}
+        language={this.state.language}
+        changeLanguage={this.getTextContent.bind(this, this.props.source)}  
+      />
     )
   }
 }
