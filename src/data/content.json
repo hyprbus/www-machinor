@@ -1,32 +1,26 @@
 [
   {
       "id": "1",
-      "text": "Tiny machines out of bits",
-      "language": "en" 
+      "en": "Tiny machines out of bits",
+      "fi": "Pieniä bittikoneita",
+      "sv": "Små bitmaskiner" 
   },
   {
     "id": "2",
-    "text": "About",
-    "language": "en" 
+    "en": "About",
+    "fi": "Machinorista",
+    "sv": "Om Machinor"
   },
   {
     "id": "3",
-    "text": "This is the main text blurb to catch your attention",
-    "language": "en" 
+    "en": "This is the main text blurb to catch your attention",
+    "fi": "Tänne tulee pitkä teksti. Erittäin, erittäin pitkä.",
+    "sv": "Detta är berättelsen om Machinor"
   },
   {
-    "id": "1",
-    "text": "Pieniä bittikoneita",
-    "language": "fi" 
-  },
-  {
-    "id": "2",
-    "text": "Machinorista",
-    "language": "fi" 
-  },
-  {
-    "id": "3",
-    "text": "Tänne tulee pitkä teksti. Erittäin, erittäin pitkä.",
-    "language": "fi" 
+    "id": "4",
+    "en": "Fat Vegan",
+    "fi": "Fat Vegan",
+    "sv": "Fat Vegan" 
   }
 ]

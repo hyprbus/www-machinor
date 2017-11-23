@@ -13,10 +13,10 @@ const SmallColumn = (props) => {
 
 export default styled(SmallColumn)`
   flex: 1;
-  background-color: darkcyan;
-  color: white;
-  margin: 2px;
-  padding: 2px;
+  background-color: ${props => props.theme.backgroundColorB};
+  color: ${props => props.theme.mainColor};
+  margin: ${props => props.theme.columnMargin};
+  padding: ${props => props.theme.columnPadding};
   @media screen and (min-width: 1200px) {
     min-width: 22%;
     max-width: 25%;

@@ -1,5 +1,6 @@
 import React from 'react'
 import PropTypes from 'prop-types'
+import {ThemeProvider} from 'styled-components'
 import Row from './Row.jsx'
 import Column from './Column.jsx'
 import SmallColumn from './SmallColumn.jsx'
@@ -7,8 +8,10 @@ import Logo from './Logo.js'
 import Ingress from './Ingress.js'
 import Heading from './Heading.jsx'
 import Text from './Text.jsx'
+import LanguageBar from './LanguageBar.jsx'
+import Language from './Language.jsx'
 import { theme } from './appSettings.js'
-import {ThemeProvider} from 'styled-components'
+import txt from '../functions/txt.js'
 
 const Layout = (props) => {
   const { content } = props
@@ -20,8 +23,13 @@ const Layout = (props) => {
       <div>
         <Row>
           <SmallColumn>
-            <Logo color="#dddddd" />
-          </SmallColumn>
+            <Logo color={theme.accentColor} />
+            <LanguageBar>
+              <Language label="EN" langCode="en" selected={props.language} changeLanguage={props.changeLanguage} />
+              <Language label="FI" langCode="fi" selected={props.language} changeLanguage={props.changeLanguage} />
+              <Language label="SV" langCode="sv" selected={props.language} changeLanguage={props.changeLanguage} />
+            </LanguageBar>
+            </SmallColumn>
           <Column>
             <Ingress text={txt(content, "1")} />
           </Column>
@@ -35,7 +43,7 @@ const Layout = (props) => {
           </Column>
         </Row>
         <Row>
-          <SmallColumn><Text text="Example 1" /></SmallColumn>
+          <SmallColumn><Text text={txt(content, "4")} /></SmallColumn>
           <SmallColumn><Text text="Example 2" /></SmallColumn>
           <SmallColumn><Text text="Example 3" /></SmallColumn>
           <SmallColumn><Text text="Example 4" /></SmallColumn>
@@ -58,9 +66,8 @@ const Layout = (props) => {
 }
 
 Layout.propTypes = {
-  content: PropTypes.array.isRequired
+  content: PropTypes.array.isRequired,
+  language: PropTypes.string.isRequired
 }
-
-function txt(objArray, id) { return objArray.find(element => element.id === id).text }
 
 export default Layout
