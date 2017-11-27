@@ -1,24 +1,96 @@
 [
   {
-      "id": "1",
-      "en": "Tiny machines out of bits",
-      "fi": "Pieniä bittikoneita",
-      "sv": "Små bitmaskiner" 
-  },
-  {
-    "id": "2",
+    "id": "aboutHeader",
     "en": "About",
     "fi": "Machinorista",
     "sv": "Om Machinor"
   },
   {
-    "id": "3",
-    "en": "This is the main text blurb to catch your attention",
-    "fi": "Tänne tulee pitkä teksti. Erittäin, erittäin pitkä.",
-    "sv": "Detta är berättelsen om Machinor"
+    "id": "aboutTxt1",
+    "en": "I develop modern user interfaces for web browsers.",
+    "fi": "Kehitän moderneja, webbiselainpohjaisia käyttöliittymiä.",
+    "sv": "Jag utvecklar moderna, webbaserade användargränssnitt."
   },
   {
-    "id": "4",
+    "id": "aboutTxt2",
+    "en": "My main interest as a front-end developer is how you can use vector graphics for presenting and manipulating business data.",
+    "fi": "Käyttöliittymäkehittäjänä olen erityisen kiinnostunut vektorigrafiikan soveltamisesta liiketoimintadatan esittämiseen ja käsittelyyn.",
+    "sv": "Som front-endutvecklare är jag speciellt intresserad av hur man kan använda vektorgrafik för att presentera och manipulera affärsdata."
+  },
+  {
+  "id": "aboutTxt3",
+  "en": "Other professional interests: usability and lean software development.",
+  "fi": "Muut ammatilliset kiinnostuksen kohteet: käytettävyys ja lean-pohjainen ohjelmistokehitys.",
+  "sv": "Övriga professionella intressen: användbarhet och lean-baserad utveckling av mjukvara."
+  },
+  {
+    "id": "techSkillsHeader",
+    "en": "TechnologySkills",
+    "fi": "Teknologiaosaaminen",
+    "sv": "Teknologikunskaper"
+  },
+  {
+    "id": "techSkills",
+    "en": "HTML5, CSS3, SCSS, JavaScript/ES6, SVG, React, React Router, styled components, Node.js, npm, Webpack, SQL, Git/GitHub, Docker, Azure",
+    "fi": "HTML5, CSS3, SCSS, JavaScript/ES6, SVG, React, React Router, styled components, Node.js, npm, Webpack, SQL, Git/GitHub, Docker, Azure",
+    "sv": "HTML5, CSS3, SCSS, JavaScript/ES6, SVG, React, React Router, styled components, Node.js, npm, Webpack, SQL, Git/GitHub, Docker, Azure"
+  },
+  {
+    "id": "langSkillsHeader",
+    "en": "LanguageSkills",
+    "fi": "Kielitaidot",
+    "sv": "Språkkunskaper"
+  },
+  {
+    "id": "langSkills",
+    "en": "English (fluent), Swedish (native), Finnish (fluent)",
+    "fi": "Englanti (sujuvaa), ruotsi (äidinkieli), suomi (sujuvaa)",
+    "sv": "Engelska (flytande), svenska (modersmål), finska (flytande)"
+  },
+  {
+    "id": "educationHeader",
+    "en": "Education",
+    "fi": "Koulutus",
+    "sv": "Utbildning"
+  },
+  {
+    "id": "educationText",
+    "en": "M.Sc. in Computer Science, Aalto University",
+    "fi": "Tietotekniikan diplomi-insinööri, Aalto-yliopisto",
+    "sv": "Diplomingenjör i datateknik, Aalto-universitet"
+  },
+  {
+    "id": "otherSkillsHeader",
+    "en": "OtherSkills",
+    "fi": "Muu osaaminen",
+    "sv": "Övriga kunskaper"
+  },
+  {
+    "id": "otherSkills1",
+    "en": "Graphic design (Photoshop, Illustrator, image processing)",
+    "fi": "Graafinen suunnittelu (Photoshop, Illustrator, kuvankäsittely)",
+    "sv": "Grafisk design (Photoshop, Illustrator, bildbehandling)"
+  },
+  {
+    "id": "otherSkills2",
+    "en": "Professional illustrator and writer (comics, short stories)",
+    "fi": "Ammatillinen kirjoittaja (sarjakuvat, novellit)",
+    "sv": "Professionell illustratör och skribent (tecknade serier, noveller)"
+  },
+  {
+    "id": "otherSkills3",
+    "en": "Music production and sound design (Propellerhead Reason)",
+    "fi": "Musiikkituotanto ja äänisuunnittelu (Propellerhead Reason)",
+    "sv": "Musikproduktion och ljuddesign (Propellerhead Reason)"
+  },
+  {
+    "id": "portfolioHeader",
+    "en": "Showcases",
+    "fi": "Esimerkkejä",
+    "sv": "Exempel" 
+  },
+  {
+    "id": "portfolio1",
     "en": "Fat Vegan",
     "fi": "Fat Vegan",
     "sv": "Fat Vegan" 

@@ -6,9 +6,11 @@ export const theme = {
   backgroundColorA: "#8a1d7d",
   backgroundColorB: "#5f5e33",
   accentColor: "#fe731c",
+  bodyColor: "#000000",
   textFont: "Roboto",
-  headerFont: "Roboto",
   fallbackFont: "sans-serif",
+  headerFont: "Roboto Mono",
+  headerFallbackFont: "monospace",
   columnMargin: "0px",
   columnPadding: "5px"
 }
