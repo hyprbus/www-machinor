@@ -1,15 +1,21 @@
-// layout column, has width max and min limitations for different screens
+import React from 'react';
+import styled from 'styled-components';
+import PropTypes from 'prop-types';
 
-import React from 'react'
-import styled from 'styled-components'
+const SmallColumn = props => (
+  <div className={props.className}>
+    {props.children}
+  </div>
+);
 
-const SmallColumn = (props) => {
-  return (
-    <div className={props.className}>
-      {props.children}
-    </div>
-  )
-}
+SmallColumn.defaultProps = {
+  children: null,
+};
+
+SmallColumn.propTypes = {
+  className: PropTypes.string.isRequired,
+  children: PropTypes.node,
+};
 
 export default styled(SmallColumn)`
   flex: 1;
@@ -26,3 +32,4 @@ export default styled(SmallColumn)`
     max-width: 33%;
   }
 `
+;

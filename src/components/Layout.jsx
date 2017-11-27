@@ -1,19 +1,18 @@
-import React from 'react'
-import PropTypes from 'prop-types'
-import { ThemeProvider, injectGlobal } from 'styled-components'
-import Page from './Page.jsx'
-import Row from './Row.jsx'
-import Column from './Column.jsx'
-import SmallColumn from './SmallColumn.jsx'
-import Logo from './Logo.jsx'
-import Invader from './Invader.jsx'
-import Ingress from './Ingress.js'
-import Heading from './Heading.jsx'
-import Text from './Text.jsx'
-import LanguageBar from './LanguageBar.jsx'
-import Language from './Language.jsx'
-import { theme } from './appSettings.js'
-import txt from '../functions/txt.js'
+import React from 'react';
+import PropTypes from 'prop-types';
+import { ThemeProvider, injectGlobal } from 'styled-components';
+import Page from './Page';
+import Row from './Row';
+import Column from './Column';
+import SmallColumn from './SmallColumn';
+import Logo from './Logo';
+import Invader from './Invader';
+import Heading from './Heading';
+import Text from './Text';
+import LanguageBar from './LanguageBar';
+import Language from './Language';
+import { theme } from './appSettings';
+import txt from '../functions/txt';
 
 const Layout = (props) => {
   injectGlobal`
@@ -21,23 +20,20 @@ const Layout = (props) => {
       margin: 0;
       background-color: ${theme.bodyColor};
     }
-  `
-  const { content } = props
-  if (content.length === 0) { return null }
-  else {
-  let lang = [{label: "EN", langCode: "en"}, {label: "FI", langCode: "fi"}, {label: "SV", langCode: "sv"}]
-  let languages = []
-  lang.forEach((l, i) =>
-    languages.push( 
-      <Language 
-        key={"lang" + i}
-        label={l.label} 
-        langCode={l.langCode} 
-        selected={props.language} 
-        changeLanguage={props.changeLanguage} 
-      />
-    )
-  )
+  `;
+  const { content } = props;
+  if (content.length === 0) { return null; }
+
+  const lang = [{ label: 'EN', langCode: 'en' }, { label: 'FI', langCode: 'fi' }, { label: 'SV', langCode: 'sv' }];
+  const languages = [];
+  lang.forEach(l =>
+    languages.push(<Language
+      key={l.langCode}
+      label={l.label}
+      langCode={l.langCode}
+      selected={props.language}
+      changeLanguage={props.changeLanguage}
+    />));
   return (
     <ThemeProvider theme={theme}>
       <Page>
@@ -54,27 +50,27 @@ const Layout = (props) => {
         </Row>
         <Row>
           <Column>
-            <Heading text={txt(content, "aboutHeader")} />
-            <Text text={txt(content, "aboutTxt1")} />
-            <Text text={txt(content, "aboutTxt2")} />
-            <Text text={txt(content, "aboutTxt3")} />
-            <Heading text={txt(content, "techSkillsHeader")} />
-            <Text text={txt(content, "techSkills")} />
-            <Heading text={txt(content, "educationHeader")} />
-            <Text text={txt(content, "educationText")} />
-            <Heading text={txt(content, "langSkillsHeader")} />
-            <Text text={txt(content, "langSkills")} />
-            <Heading text={txt(content, "otherSkillsHeader")} />
-            <Text text={txt(content, "otherSkills1")} />
-            <Text text={txt(content, "otherSkills2")} />
-            <Text text={txt(content, "otherSkills3")} />
+            <Heading text={txt(content, 'aboutHeader')} />
+            <Text text={txt(content, 'aboutTxt1')} />
+            <Text text={txt(content, 'aboutTxt2')} />
+            <Text text={txt(content, 'aboutTxt3')} />
+            <Heading text={txt(content, 'techSkillsHeader')} />
+            <Text text={txt(content, 'techSkills')} />
+            <Heading text={txt(content, 'educationHeader')} />
+            <Text text={txt(content, 'educationText')} />
+            <Heading text={txt(content, 'langSkillsHeader')} />
+            <Text text={txt(content, 'langSkills')} />
+            <Heading text={txt(content, 'otherSkillsHeader')} />
+            <Text text={txt(content, 'otherSkills1')} />
+            <Text text={txt(content, 'otherSkills2')} />
+            <Text text={txt(content, 'otherSkills3')} />
           </Column>
         </Row>
         <Row>
-          <Heading text={txt(content, "portfolioHeader")} />
+          <Heading text={txt(content, 'portfolioHeader')} />
         </Row>
         <Row>
-          <SmallColumn><Text text={txt(content, "portfolio1")} /></SmallColumn>
+          <SmallColumn><Text text={txt(content, 'portfolio1')} /></SmallColumn>
           <SmallColumn><Text text="Example 2" /></SmallColumn>
           <SmallColumn><Text text="Example 3" /></SmallColumn>
           <SmallColumn><Text text="Example 4" /></SmallColumn>
@@ -82,23 +78,24 @@ const Layout = (props) => {
         </Row>
         <Row>
           <Column>
-            <Text text="sebastian.nyberg@machinor.fi" />
+            <Text text={txt(content, 'email')} />
           </Column>
           <Column>
-            <Text text="+ 358 40 706 6006" />
+            <Text text={txt(content, 'phone')} />
           </Column>
           <Column>
-            <Text text="Helsinki | Finland" />
+            <Text text={txt(content, 'company')} />
           </Column>
         </Row>
       </Page>
     </ThemeProvider>
-  )}
-}
+  );
+};
 
 Layout.propTypes = {
-  content: PropTypes.array.isRequired,
-  language: PropTypes.string.isRequired
-}
+  content: PropTypes.PropTypes.arrayOf(PropTypes.object).isRequired,
+  language: PropTypes.string.isRequired,
+  changeLanguage: PropTypes.func.isRequired,
+};
 
-export default Layout
+export default Layout;
