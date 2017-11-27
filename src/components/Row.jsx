@@ -14,9 +14,6 @@ const Row = (props) => {
 export default styled(Row)`
   display: flex;
   flex-wrap: wrap;
-  max-width: 1200px;
-  margin: auto;
-
   @media screen and (max-width: 768px) {
     display: block;
 }

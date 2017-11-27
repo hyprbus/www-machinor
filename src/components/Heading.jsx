@@ -5,7 +5,7 @@ import styled from 'styled-components'
 const Heading = (props) => {
   return (
     <h1 className={props.className}>
-      [ {props.text} ]
+      {"<" + props.text + ">"}
     </h1>
   )
 }
@@ -15,7 +15,7 @@ Heading.propTypes = {
 }
 
 export default styled(Heading)`
-  font-family: ${props => props.theme.headerFont};
+  font-family: ${props => props.theme.headerFont}, ${props => props.theme.headerFallbackFont};
   color: ${props => props.theme.accentColor};
   font-size: 1em;
   font-weight: bold;

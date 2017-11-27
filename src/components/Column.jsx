@@ -13,7 +13,7 @@ const Column = (props) => {
 
 export default styled(Column)`
   flex: 1;
-  background-color: ${props => props.theme.backgroundColorA};
+  background-color: ${props => props.theme.backgroundColorB};
   color: ${props => props.theme.mainColor};
   margin: ${props => props.theme.columnMargin};
   padding: ${props => props.theme.columnPadding};

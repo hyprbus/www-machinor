@@ -5,9 +5,9 @@ import styled from 'styled-components'
 const Text = (props) => {
   const { text } = props
   return (
-    <div className={props.className}>
+    <p className={props.className}>
       {text}
-    </div>
+    </p>
   )
 }
 
