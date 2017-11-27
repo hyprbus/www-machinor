@@ -1,5 +1,23 @@
 [
   {
+    "id": "phone",
+    "en": "+ 358 40 706 6006",
+    "fi": "040 706 6006",
+    "sv": "+ 358 706 6006"
+  },
+  {
+    "id": "email",
+    "en": "sebastian.nyberg@machinor.fi",
+    "fi": "sebastian.nyberg@machinor.fi",
+    "sv": "sebastian.nyberg@machinor.fi"
+  },
+  {
+    "id": "company",
+    "en": "Machinor | 2863481-4 | Helsinki, Finland",
+    "fi": "Machinor | 2863481-4 | Helsinki, Suomi",
+    "sv": "Machinor | 2863481-4 | Helsingfors, Finland"
+  },
+  {
     "id": "aboutHeader",
     "en": "About",
     "fi": "Machinorista",
@@ -8,14 +26,14 @@
   {
     "id": "aboutTxt1",
     "en": "I develop modern user interfaces for web browsers.",
-    "fi": "Kehitän moderneja, webbiselainpohjaisia käyttöliittymiä.",
+    "fi": "Kehitän moderneja, selainpohjaisia käyttöliittymiä.",
     "sv": "Jag utvecklar moderna, webbaserade användargränssnitt."
   },
   {
     "id": "aboutTxt2",
     "en": "My main interest as a front-end developer is how you can use vector graphics for presenting and manipulating business data.",
     "fi": "Käyttöliittymäkehittäjänä olen erityisen kiinnostunut vektorigrafiikan soveltamisesta liiketoimintadatan esittämiseen ja käsittelyyn.",
-    "sv": "Som front-endutvecklare är jag speciellt intresserad av hur man kan använda vektorgrafik för att presentera och manipulera affärsdata."
+    "sv": "Som frontendutvecklare är jag speciellt intresserad av hur man kan använda vektorgrafik för att presentera och manipulera affärsdata."
   },
   {
   "id": "aboutTxt3",

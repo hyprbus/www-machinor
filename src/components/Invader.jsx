@@ -1,9 +1,8 @@
-import React from 'react'
-import PropTypes from 'prop-types'
+import React from 'react';
+import PropTypes from 'prop-types';
 
-const Invader = (props) => {
-  return (
-    <div>
+const Invader = props => (
+  <div>
     <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 420 110">
       <g fill={props.color}>
         <polygon points="370,30 370,40 370,50 370,60 370,70 380,70 380,60 380,50 380,40 380,30 380,20 370,20 	"/>
@@ -34,11 +33,10 @@ const Invader = (props) => {
       </g>
     </svg>
   </div>
-  )
-}
+);
 
 Invader.propTypes = {
-  color: PropTypes.string
-}
+  color: PropTypes.string.isRequired,
+};
 
-export default Invader
+export default Invader;

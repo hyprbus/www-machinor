@@ -1,15 +1,21 @@
-// layout row
+import React from 'react';
+import styled from 'styled-components';
+import PropTypes from 'prop-types';
 
-import React from 'react'
-import styled from 'styled-components'
+const Row = props => (
+  <div className={props.className}>
+    {props.children}
+  </div>
+);
 
-const Row = (props) => {
-  return (
-    <div className={props.className}>
-      {props.children}
-    </div>
-  )
-}
+Row.defaultProps = {
+  children: null,
+};
+
+Row.propTypes = {
+  className: PropTypes.string.isRequired,
+  children: PropTypes.node,
+};
 
 export default styled(Row)`
   display: flex;
@@ -17,4 +23,4 @@ export default styled(Row)`
   @media screen and (max-width: 768px) {
     display: block;
 }
-`
+`;
