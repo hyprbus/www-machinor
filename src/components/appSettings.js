@@ -1,5 +1,4 @@
 // application-specific settings
-// visual theme
 
 export const theme = {
   mainColor: '#ffffff',

@@ -20,5 +20,5 @@ Page.propTypes = {
 export default styled(Page)`
   max-width: 1200px;
   margin: auto;
-  background-color: ${props => props.theme.backgroundColorA};
+  background-color: ${props => props.theme.backgroundColorB};
 `;

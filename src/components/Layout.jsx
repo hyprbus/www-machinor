@@ -9,8 +9,12 @@ import Logo from './Logo';
 import Invader from './Invader';
 import Heading from './Heading';
 import Text from './Text';
+import PortfolioItem from './PortfolioItem';
 import LanguageBar from './LanguageBar';
 import Language from './Language';
+import Potato from '../images/potato.svg';
+import Alien from '../images/spaceinvader.svg';
+import Game from '../images/game.svg';
 import { theme } from './appSettings';
 import txt from '../functions/txt';
 
@@ -23,6 +27,29 @@ const Layout = (props) => {
   `;
   const { content } = props;
   if (content.length === 0) { return null; }
+
+  const portfolioData = [
+    { image: Potato, header: 'portfolio1', summary: 'portfolio1Desc' },
+    { image: Alien, header: 'portfolio2', summary: 'portfolio2Desc' },
+    { image: Game, header: 'portfolio3', summary: 'portfolio3Desc' },
+  ];
+  const portfolio = [];
+  portfolioData.forEach((p) => {
+    const SVGElement = p.image;
+    portfolio.push(
+      <SmallColumn>
+        <PortfolioItem
+          key={p.header}
+          header={txt(content, p.header)}
+          summary={txt(content, p.summary)}
+        >
+          <SVGElement
+            fill={theme.accentColor}
+            opacity="0.5"
+          />
+        </PortfolioItem>
+      </SmallColumn>);
+  });
 
   const lang = [{ label: 'EN', langCode: 'en' }, { label: 'FI', langCode: 'fi' }, { label: 'SV', langCode: 'sv' }];
   const languages = [];
@@ -50,6 +77,17 @@ const Layout = (props) => {
         </Row>
         <Row>
           <Column>
+            <Text text={txt(content, 'email')} />
+          </Column>
+          <Column>
+            <Text text={txt(content, 'phone')} />
+          </Column>
+          <Column>
+            <Text text={txt(content, 'company')} />
+          </Column>
+        </Row>
+        <Row>
+          <Column>
             <Heading text={txt(content, 'aboutHeader')} />
             <Text text={txt(content, 'aboutTxt1')} />
             <Text text={txt(content, 'aboutTxt2')} />
@@ -70,22 +108,7 @@ const Layout = (props) => {
           <Heading text={txt(content, 'portfolioHeader')} />
         </Row>
         <Row>
-          <SmallColumn><Text text={txt(content, 'portfolio1')} /></SmallColumn>
-          <SmallColumn><Text text="Example 2" /></SmallColumn>
-          <SmallColumn><Text text="Example 3" /></SmallColumn>
-          <SmallColumn><Text text="Example 4" /></SmallColumn>
-          <SmallColumn><Text text="Example 5" /></SmallColumn>
-        </Row>
-        <Row>
-          <Column>
-            <Text text={txt(content, 'email')} />
-          </Column>
-          <Column>
-            <Text text={txt(content, 'phone')} />
-          </Column>
-          <Column>
-            <Text text={txt(content, 'company')} />
-          </Column>
+          {portfolio}
         </Row>
       </Page>
     </ThemeProvider>

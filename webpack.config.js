@@ -25,6 +25,19 @@ module.exports = {
       exclude: /node_modules/,
       loader: 'babel-loader',
     },
+    {
+      test: /\.svg$/,
+      exclude: /node_modules/,
+      loader: 'svg-react-loader',
+      query: {
+        classIdPrefix: '[name]-[hash:8]__',
+        propsMap: {
+          fillRule: 'fill-rule',
+          foo: 'bar',
+        },
+        xmlnsTest: /^xmlns.*$/,
+      }
+    }
     ],
   },
   resolve: {
