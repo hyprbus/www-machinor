@@ -112,5 +112,35 @@
     "en": "Fat Vegan",
     "fi": "Fat Vegan",
     "sv": "Fat Vegan" 
+  },
+  {
+    "id": "portfolio1Desc",
+    "en": "Conceptual restaurant web site, mobile first",
+    "fi": "Fat Vegan kuvaus",
+    "sv": "Fat Vegan beskrivning" 
+  },
+  {
+    "id": "portfolio2",
+    "en": "Machinor Website",
+    "fi": "Machinorin kotisivut",
+    "sv": "Machinors webbsidor" 
+  },
+  {
+    "id": "portfolio2Desc",
+    "en": "A website as a single page React app",
+    "fi": "Machinor webbi",
+    "sv": "Machinor hejsan hoppsan" 
+  },
+  {
+    "id": "portfolio3",
+    "en": "Board Game",
+    "fi": "Lautapeli",
+    "sv": "Brädspel" 
+  },
+  {
+    "id": "portfolio3Desc",
+    "en": "A simple game, based on the popular Finnish board game.",
+    "fi": "Yksinkertainen lautapeli, perustuen Afrikan tähti -peliin.",
+    "sv": "Ett enkelt spel, baserat på brädspelet Afrikas stjärna." 
   }
 ]
