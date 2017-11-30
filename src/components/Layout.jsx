@@ -5,6 +5,7 @@ import Page from './Page';
 import Row from './Row';
 import Column from './Column';
 import SmallColumn from './SmallColumn';
+import Modal from './Modal';
 import Logo from './Logo';
 import Invader from './Invader';
 import Heading from './Heading';
@@ -25,23 +26,32 @@ const Layout = (props) => {
       background-color: ${theme.bodyColor};
     }
   `;
+
   const { content } = props;
   if (content.length === 0) { return null; }
 
   const portfolioData = [
-    { image: Potato, header: 'portfolio1', summary: 'portfolio1Desc' },
-    { image: Alien, header: 'portfolio2', summary: 'portfolio2Desc' },
-    { image: Game, header: 'portfolio3', summary: 'portfolio3Desc' },
+    {
+      image: Potato, header: 'portfolio1', summary: 'portfolio1Desc', description: 'portfolio1FullText',
+    },
+    {
+      image: Alien, header: 'portfolio2', summary: 'portfolio2Desc', description: 'portfolio2FullText',
+    },
+    {
+      image: Game, header: 'portfolio3', summary: 'portfolio3Desc', description: 'portfolio3FullText',
+    },
   ];
   const portfolio = [];
   portfolioData.forEach((p) => {
     const SVGElement = p.image;
     portfolio.push(
-      <SmallColumn>
+      <SmallColumn key={p.header}>
         <PortfolioItem
-          key={p.header}
           header={txt(content, p.header)}
           summary={txt(content, p.summary)}
+          text={txt(content, p.description)}
+          showModal={props.showModal}
+          portfolioId={p.header}
         >
           <SVGElement
             fill={theme.accentColor}
@@ -110,6 +120,12 @@ const Layout = (props) => {
         <Row>
           {portfolio}
         </Row>
+        <Modal
+          visible={props.modalVisible}
+          header={props.modalHeader}
+          text={props.modalText}
+          cancelModal={props.hideModal}
+        />
       </Page>
     </ThemeProvider>
   );
@@ -119,6 +135,11 @@ Layout.propTypes = {
   content: PropTypes.PropTypes.arrayOf(PropTypes.object).isRequired,
   language: PropTypes.string.isRequired,
   changeLanguage: PropTypes.func.isRequired,
+  modalVisible: PropTypes.bool.isRequired,
+  modalHeader: PropTypes.string.isRequired,
+  modalText: PropTypes.string.isRequired,
+  showModal: PropTypes.func.isRequired,
+  hideModal: PropTypes.func.isRequired,
 };
 
 export default Layout;

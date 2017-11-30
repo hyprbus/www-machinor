@@ -120,6 +120,12 @@
     "sv": "Fat Vegan beskrivning" 
   },
   {
+    "id": "portfolio1FullText",
+    "en": "Conceptual restaurant website, designed mobile first. My main idea was to make the website feel like an app and not having the menu items hidden behind a hamburger icon. Main technologies: React, React Router.",
+    "fi": "Fat Vegan kuvaus",
+    "sv": "Fat Vegan beskrivning" 
+  },
+  {
     "id": "portfolio2",
     "en": "Machinor Website",
     "fi": "Machinorin kotisivut",
@@ -132,6 +138,12 @@
     "sv": "Machinor hejsan hoppsan" 
   },
   {
+    "id": "portfolio2FullText",
+    "en": "Machinor long",
+    "fi": "Machinor long",
+    "sv": "Machinor long" 
+  },
+  {
     "id": "portfolio3",
     "en": "Board Game",
     "fi": "Lautapeli",
@@ -139,8 +151,14 @@
   },
   {
     "id": "portfolio3Desc",
-    "en": "A simple game, based on the popular Finnish board game.",
+    "en": "A simple game, based on the popular Finnish board game Star of Africa.",
     "fi": "Yksinkertainen lautapeli, perustuen Afrikan tähti -peliin.",
     "sv": "Ett enkelt spel, baserat på brädspelet Afrikas stjärna." 
+  },
+  {
+    "id": "portfolio3FullText",
+    "en": "Africa long",
+    "fi": "Afrika long",
+    "sv": "Afrika long" 
   }
 ]

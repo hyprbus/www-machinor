@@ -12,6 +12,8 @@ export const theme = {
   headerFallbackFont: 'monospace',
   columnMargin: '0px',
   columnPadding: '5px',
+  breakpointPhone: 768,
+  breakpointComputer: '1200',
 };
 
 // text content in different languages

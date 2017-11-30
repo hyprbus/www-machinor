@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import styled from 'styled-components';
+import styled, { css } from 'styled-components';
 
 const PortfolioHeader = (props) => {
   const { text } = props;
@@ -11,9 +11,14 @@ const PortfolioHeader = (props) => {
   );
 };
 
+PortfolioHeader.defaultProps = {
+  center: false,
+};
+
 PortfolioHeader.propTypes = {
   className: PropTypes.string.isRequired,
   text: PropTypes.string.isRequired,
+  center: PropTypes.bool,
 };
 
 export default styled(PortfolioHeader)`
@@ -24,4 +29,7 @@ export default styled(PortfolioHeader)`
   color: ${props => props.theme.mainColor};
   padding: 1% 2% 1% 2%;
   margin: 0 0 .5em 0;
+  ${props => !props.center && css`
+    text-align: left;
+  `}
 `;
