@@ -20,7 +20,7 @@ Row.propTypes = {
 export default styled(Row)`
   display: flex;
   flex-wrap: wrap;
-  @media screen and (max-width: 768px) {
+  @media screen and (max-width: ${props => props.theme.breakpointPhone}px) {
     display: block;
-}
+  }
 `;

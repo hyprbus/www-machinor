@@ -103,9 +103,21 @@
   },
   {
     "id": "portfolioHeader",
-    "en": "Showcases",
+    "en": "Showcase",
     "fi": "Esimerkkejä",
     "sv": "Exempel" 
+  },
+  {
+    "id": "portfolioLink",
+    "en": "Go to site",
+    "fi": "Siirry sivustolle",
+    "sv": "Gå till sajten"
+  },
+  {
+    "id": "portfolioSourceCode",
+    "en": "Source code",
+    "fi": "Lähdekoodi",
+    "sv": "Källkod"
   },
   {
     "id": "portfolio1",
@@ -116,6 +128,12 @@
   {
     "id": "portfolio1Desc",
     "en": "Conceptual restaurant web site, mobile first",
+    "fi": "Fat Vegan kuvaus",
+    "sv": "Fat Vegan beskrivning" 
+  },
+  {
+    "id": "portfolio1FullText",
+    "en": "Conceptual, mobile first restaurant website. My main goal was to make the website feel like an app and minimising the number of clicks for the customers. Main technologies: React, React Router, react-transition-group animation library.",
     "fi": "Fat Vegan kuvaus",
     "sv": "Fat Vegan beskrivning" 
   },
@@ -132,6 +150,12 @@
     "sv": "Machinor hejsan hoppsan" 
   },
   {
+    "id": "portfolio2FullText",
+    "en": "Machinor long",
+    "fi": "Machinor long",
+    "sv": "Machinor long" 
+  },
+  {
     "id": "portfolio3",
     "en": "Board Game",
     "fi": "Lautapeli",
@@ -139,8 +163,14 @@
   },
   {
     "id": "portfolio3Desc",
-    "en": "A simple game, based on the popular Finnish board game.",
+    "en": "A simple game, based on the popular Finnish board game Star of Africa.",
     "fi": "Yksinkertainen lautapeli, perustuen Afrikan tähti -peliin.",
     "sv": "Ett enkelt spel, baserat på brädspelet Afrikas stjärna." 
+  },
+  {
+    "id": "portfolio3FullText",
+    "en": "Africa long",
+    "fi": "Afrika long",
+    "sv": "Afrika long" 
   }
 ]

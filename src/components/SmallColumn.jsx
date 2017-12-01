@@ -23,13 +23,12 @@ export default styled(SmallColumn)`
   color: ${props => props.theme.mainColor};
   margin: ${props => props.theme.columnMargin};
   padding: ${props => props.theme.columnPadding};
-  @media screen and (min-width: 1200px) {
+  @media screen and (min-width: ${props => props.theme.breakpointComputer}px) {
     min-width: 22%;
     max-width: 25%;
   }
-  @media screen and (min-width: 769px) and (max-width: 1199px) {
+  @media screen and (min-width: ${props => props.theme.breakpointPhone + 1}px) and (max-width: ${props => props.theme.breakpointComputer - 1}px) {
     min-width: 30%;
     max-width: 33%;
   }
-`
-;
+`;

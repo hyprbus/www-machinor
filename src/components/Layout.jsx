@@ -5,6 +5,7 @@ import Page from './Page';
 import Row from './Row';
 import Column from './Column';
 import SmallColumn from './SmallColumn';
+import Modal from './Modal';
 import Logo from './Logo';
 import Invader from './Invader';
 import Heading from './Heading';
@@ -25,23 +26,51 @@ const Layout = (props) => {
       background-color: ${theme.bodyColor};
     }
   `;
+
   const { content } = props;
   if (content.length === 0) { return null; }
 
   const portfolioData = [
-    { image: Potato, header: 'portfolio1', summary: 'portfolio1Desc' },
-    { image: Alien, header: 'portfolio2', summary: 'portfolio2Desc' },
-    { image: Game, header: 'portfolio3', summary: 'portfolio3Desc' },
+    {
+      image: Potato,
+      header: 'portfolio1',
+      summary: 'portfolio1Desc',
+      description: 'portfolio1FullText',
+      site: 'http://fatvegan.azurewebsites.net',
+      sourceCode: 'https://github.com/hyprbus/fatvegan',
+    },
+    {
+      image: Alien,
+      header: 'portfolio2',
+      summary: 'portfolio2Desc',
+      description: 'portfolio2FullText',
+      site: 'http://machinor-web-container.azurewebsites.net/',
+      sourceCode: 'https://github.com/hyprbus/www-machinor',
+    },
+    {
+      image: Game,
+      header: 'portfolio3',
+      summary: 'portfolio3Desc',
+      description: 'portfolio3FullText',
+      site: 'http://pandapropaganda.com/work/afrika_game/afrika.html',
+      sourceCode: '',
+    },
   ];
   const portfolio = [];
   portfolioData.forEach((p) => {
     const SVGElement = p.image;
     portfolio.push(
-      <SmallColumn>
+      <SmallColumn key={p.header}>
         <PortfolioItem
-          key={p.header}
           header={txt(content, p.header)}
           summary={txt(content, p.summary)}
+          text={txt(content, p.description)}
+          showModal={props.showModal}
+          portfolioId={p.header}
+          site={p.site}
+          siteLabel={txt(content, 'portfolioLink')}
+          sourceCode={p.sourceCode}
+          sourceCodeLabel={txt(content, 'portfolioSourceCode')}
         >
           <SVGElement
             fill={theme.accentColor}
@@ -110,6 +139,17 @@ const Layout = (props) => {
         <Row>
           {portfolio}
         </Row>
+        <Modal
+          visible={props.modalVisible}
+          header={props.modalHeader}
+          text={props.modalText}
+          cancelModal={props.hideModal}
+          animateModal={props.animateModal}
+          site={props.site}
+          siteLabel={props.siteLabel}
+          sourceCode={props.sourceCode}
+          sourceCodeLabel={props.sourceCodeLabel}
+        />
       </Page>
     </ThemeProvider>
   );
@@ -119,6 +159,16 @@ Layout.propTypes = {
   content: PropTypes.PropTypes.arrayOf(PropTypes.object).isRequired,
   language: PropTypes.string.isRequired,
   changeLanguage: PropTypes.func.isRequired,
+  modalVisible: PropTypes.bool.isRequired,
+  modalHeader: PropTypes.string.isRequired,
+  modalText: PropTypes.string.isRequired,
+  showModal: PropTypes.func.isRequired,
+  hideModal: PropTypes.func.isRequired,
+  animateModal: PropTypes.string.isRequired,
+  site: PropTypes.string.isRequired,
+  siteLabel: PropTypes.string.isRequired,
+  sourceCode: PropTypes.string.isRequired,
+  sourceCodeLabel: PropTypes.string.isRequired,
 };
 
 export default Layout;

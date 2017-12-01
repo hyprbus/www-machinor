@@ -5,6 +5,7 @@ export const theme = {
   backgroundColorA: '#8a1d7d',
   backgroundColorB: '#5f5e33',
   accentColor: '#fe731c',
+  linkHoverColor: '#fe731c',
   bodyColor: '#000000',
   textFont: 'Roboto',
   fallbackFont: 'sans-serif',
@@ -12,6 +13,8 @@ export const theme = {
   headerFallbackFont: 'monospace',
   columnMargin: '0px',
   columnPadding: '5px',
+  breakpointPhone: 768,
+  breakpointComputer: '1200',
 };
 
 // text content in different languages
