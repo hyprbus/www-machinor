@@ -23,6 +23,6 @@ export default styled(Button)`
   color: ${props => props.theme.mainColor};
   padding: 0 2% 0 2%;
   width: 30%;
-  margin: 2% auto 0 auto;
+  margin: 10px auto 0 auto;
   cursor: pointer;
 `;

@@ -5,6 +5,7 @@ export const theme = {
   backgroundColorA: '#8a1d7d',
   backgroundColorB: '#5f5e33',
   accentColor: '#fe731c',
+  linkHoverColor: '#fe731c',
   bodyColor: '#000000',
   textFont: 'Roboto',
   fallbackFont: 'sans-serif',

@@ -103,9 +103,21 @@
   },
   {
     "id": "portfolioHeader",
-    "en": "Showcases",
+    "en": "Showcase",
     "fi": "Esimerkkejä",
     "sv": "Exempel" 
+  },
+  {
+    "id": "portfolioLink",
+    "en": "Go to site",
+    "fi": "Siirry sivustolle",
+    "sv": "Gå till sajten"
+  },
+  {
+    "id": "portfolioSourceCode",
+    "en": "Source code",
+    "fi": "Lähdekoodi",
+    "sv": "Källkod"
   },
   {
     "id": "portfolio1",
@@ -121,7 +133,7 @@
   },
   {
     "id": "portfolio1FullText",
-    "en": "Conceptual restaurant website, designed mobile first. My main idea was to make the website feel like an app and not having the menu items hidden behind a hamburger icon. Main technologies: React, React Router.",
+    "en": "Conceptual, mobile first restaurant website. My main goal was to make the website feel like an app and minimising the number of clicks for the customers. Main technologies: React, React Router, react-transition-group animation library.",
     "fi": "Fat Vegan kuvaus",
     "sv": "Fat Vegan beskrivning" 
   },

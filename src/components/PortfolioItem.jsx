@@ -10,7 +10,15 @@ class PortfolioItem extends Component {
   }
 
   showAll() {
-    this.props.showModal(true, this.props.header, this.props.text);
+    this.props.showModal(
+      true,
+      this.props.header,
+      this.props.text,
+      this.props.site,
+      this.props.siteLabel,
+      this.props.sourceCode,
+      this.props.sourceCodeLabel,
+    );
   }
 
   render() {
@@ -39,6 +47,10 @@ PortfolioItem.propTypes = {
   summary: PropTypes.string.isRequired,
   text: PropTypes.string.isRequired,
   children: PropTypes.node,
+  site: PropTypes.string.isRequired,
+  siteLabel: PropTypes.string.isRequired,
+  sourceCode: PropTypes.string.isRequired,
+  sourceCodeLabel: PropTypes.string.isRequired,
 };
 
 export default styled(PortfolioItem)`

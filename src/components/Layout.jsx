@@ -32,13 +32,28 @@ const Layout = (props) => {
 
   const portfolioData = [
     {
-      image: Potato, header: 'portfolio1', summary: 'portfolio1Desc', description: 'portfolio1FullText',
+      image: Potato,
+      header: 'portfolio1',
+      summary: 'portfolio1Desc',
+      description: 'portfolio1FullText',
+      site: 'http://fatvegan.azurewebsites.net',
+      sourceCode: 'https://github.com/hyprbus/fatvegan',
     },
     {
-      image: Alien, header: 'portfolio2', summary: 'portfolio2Desc', description: 'portfolio2FullText',
+      image: Alien,
+      header: 'portfolio2',
+      summary: 'portfolio2Desc',
+      description: 'portfolio2FullText',
+      site: 'http://machinor-web-container.azurewebsites.net/',
+      sourceCode: 'https://github.com/hyprbus/www-machinor',
     },
     {
-      image: Game, header: 'portfolio3', summary: 'portfolio3Desc', description: 'portfolio3FullText',
+      image: Game,
+      header: 'portfolio3',
+      summary: 'portfolio3Desc',
+      description: 'portfolio3FullText',
+      site: 'http://pandapropaganda.com/work/afrika_game/afrika.html',
+      sourceCode: '',
     },
   ];
   const portfolio = [];
@@ -52,6 +67,10 @@ const Layout = (props) => {
           text={txt(content, p.description)}
           showModal={props.showModal}
           portfolioId={p.header}
+          site={p.site}
+          siteLabel={txt(content, 'portfolioLink')}
+          sourceCode={p.sourceCode}
+          sourceCodeLabel={txt(content, 'portfolioSourceCode')}
         >
           <SVGElement
             fill={theme.accentColor}
@@ -125,6 +144,11 @@ const Layout = (props) => {
           header={props.modalHeader}
           text={props.modalText}
           cancelModal={props.hideModal}
+          animateModal={props.animateModal}
+          site={props.site}
+          siteLabel={props.siteLabel}
+          sourceCode={props.sourceCode}
+          sourceCodeLabel={props.sourceCodeLabel}
         />
       </Page>
     </ThemeProvider>
@@ -140,6 +164,11 @@ Layout.propTypes = {
   modalText: PropTypes.string.isRequired,
   showModal: PropTypes.func.isRequired,
   hideModal: PropTypes.func.isRequired,
+  animateModal: PropTypes.string.isRequired,
+  site: PropTypes.string.isRequired,
+  siteLabel: PropTypes.string.isRequired,
+  sourceCode: PropTypes.string.isRequired,
+  sourceCodeLabel: PropTypes.string.isRequired,
 };
 
 export default Layout;

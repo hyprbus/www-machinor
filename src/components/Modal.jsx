@@ -9,10 +9,11 @@
 
 import React from 'react';
 import PropTypes from 'prop-types';
-import styled from 'styled-components';
+import styled, { css, keyframes } from 'styled-components';
 import Button from './Button';
 import PortfolioHeader from './PortfolioHeader';
 import Text from './Text';
+import LinkElement from './LinkElement';
 
 class Modal extends React.Component {
   constructor(props) {
@@ -25,17 +26,23 @@ class Modal extends React.Component {
   }
 
   render() {
-    if (!this.props.visible) {
+    console.log(this.props.animateModal);
+    if (!this.props.visible && this.props.animateModal === '') {
       return null;
     }
+    const appSite = this.props.site.length > 0 ?
+      <LinkElement label={this.props.siteLabel} link={this.props.site} /> :
+      null;
+    const sourceSite = this.props.sourceCode.length > 0 ?
+      <LinkElement label={this.props.sourceCodeLabel} link={this.props.sourceCode} /> :
+      null;
     return (
       <div className={this.props.className} >
         <ModalWindow>
           <PortfolioHeader text={this.props.header} center />
           <Text text={this.props.text} />
-          <div id="portfolioLinks">
-            Links
-          </div>
+          <div>{appSite}</div>
+          <div>{sourceSite}</div>
           <Button text="Close" click={this.handleCancel} />
         </ModalWindow>
       </div>
@@ -54,17 +61,39 @@ const ModalWindow = styled.div`
 Modal.defaultProps = {
   header: 'Modal Header',
   text: 'Description Text',
-  links: [],
 };
 
 Modal.propTypes = {
   className: PropTypes.string.isRequired,
   header: PropTypes.string,
   text: PropTypes.string,
-  links: PropTypes.arrayOf(PropTypes.object),
   visible: PropTypes.bool.isRequired,
   cancelModal: PropTypes.func.isRequired,
+  site: PropTypes.string.isRequired,
+  siteLabel: PropTypes.string.isRequired,
+  sourceCode: PropTypes.string.isRequired,
+  sourceCodeLabel: PropTypes.string.isRequired,
 };
+
+const enterAnimation = keyframes`
+from {
+  transform: scale(0);
+}
+
+to {
+  transform: scale(1);
+}
+`;
+
+const exitAnimation = keyframes`
+from {
+  transform: scale(1);
+}
+
+to {
+  transform: scale(0);
+}
+`;
 
 export default styled(Modal)`
   font-family: ${props => props.theme.textFont}, ${props => props.theme.fallbackFont};
@@ -81,4 +110,10 @@ export default styled(Modal)`
   height: 100%; /* Full height */
   overflow: auto; /* Enable scroll if needed */
   margin: 0 auto;
+  ${props => props.animateModal === 'in' && css`
+    animation: ${enterAnimation} .2s ease-in forwards;;
+  `}
+  ${props => props.animateModal === 'out' && css`
+  animation: ${exitAnimation} .2s ease-in forwards;
+  `}
 `;

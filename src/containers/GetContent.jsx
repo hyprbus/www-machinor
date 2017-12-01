@@ -15,6 +15,11 @@ export default class GetContent extends Component {
       modalVisible: false,
       modalHeader: 'Generic Header',
       modalText: 'Generic description',
+      site: '',
+      siteLabel: '',
+      sourceCode: '',
+      sourceCodeLabel: '',
+      animateModal: '', // 'in', 'out', ''
     };
     this.getTextContent = this.getTextContent.bind(this);
     this.showModal = this.showModal.bind(this);
@@ -41,17 +46,23 @@ export default class GetContent extends Component {
     });
   }
 
-  showModal(visible, modalHeader, modalText) {
+  showModal(visible, modalHeader, modalText, site, siteLabel, sourceCode, sourceCodeLabel) {
     this.setState(prevState => ({
       modalVisible: true,
+      animateModal: 'in',
       modalHeader,
       modalText,
+      site,
+      siteLabel,
+      sourceCode,
+      sourceCodeLabel,
     }));
   }
 
   hideModal() {
     this.setState(prevState => ({
       modalVisible: false,
+      animateModal: 'out',
     }));
   }
 
@@ -66,6 +77,11 @@ export default class GetContent extends Component {
         modalText={this.state.modalText}
         showModal={this.showModal}
         hideModal={this.hideModal}
+        animateModal={this.state.animateModal}
+        site={this.state.site}
+        siteLabel={this.state.siteLabel}
+        sourceCode={this.state.sourceCode}
+        sourceCodeLabel={this.state.sourceCodeLabel}
       />
     );
   }
