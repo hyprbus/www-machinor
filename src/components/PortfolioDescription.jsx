@@ -17,7 +17,7 @@ PortfolioDescription.propTypes = {
 };
 
 export default styled(PortfolioDescription)`
-  font-family: ${props => props.theme.textFont}, ${props => props.theme.fallbackFont};
+  font-family: ${props => props.theme.textFont};
   font-size: 1em;
   background-color: ${props => props.theme.backgroundColorA};
   color: ${props => props.theme.mainColor};

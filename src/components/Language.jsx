@@ -30,11 +30,14 @@ Language.propTypes = {
 
 export default styled(Language)`
   display: inline;
+  &:hover {
+    text-decoration: underline;
+  }
   padding: .25em 1em .25em 1em;
   cursor: pointer;
   user-select: none;
   font-size: 0.8em;
-  font-family: ${props => props.theme.textFont}, ${props => props.theme.fallbackFont};
+  font-family: ${props => props.theme.textFont};
   ${props => props.langCode === props.selected && css`
     color: ${props => props.theme.backgroundColorB};
     background-color: ${props => props.theme.mainColor};

@@ -19,13 +19,14 @@ PortfolioHeader.propTypes = {
   className: PropTypes.string.isRequired,
   text: PropTypes.string.isRequired,
   center: PropTypes.bool,
+  backgroundColor: PropTypes.string.isRequired,
 };
 
 export default styled(PortfolioHeader)`
-  font-family: ${props => props.theme.headerFont}, ${props => props.theme.headerFallbackFont};
+  font-family: ${props => props.theme.headerFont};
   font-size: 1.5em;
   text-align: center;
-  background-color: ${props => props.theme.backgroundColorA};
+  background-color: ${props => props.backgroundColor};
   color: ${props => props.theme.mainColor};
   padding: 1% 2% 1% 2%;
   margin: 0 0 .5em 0;

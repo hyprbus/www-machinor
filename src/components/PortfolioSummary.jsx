@@ -3,10 +3,11 @@ import PropTypes from 'prop-types';
 import styled from 'styled-components';
 import PortfolioHeader from './PortfolioHeader';
 import PortfolioDescription from './PortfolioDescription';
+import { theme } from './appSettings';
 
 const PortfolioSummary = props => (
   <div id="pSummaryTest" className={props.className}>
-    <PortfolioHeader text={props.header} />
+    <PortfolioHeader text={props.header} center backgroundColor={theme.backgroundColorA} />
     <PortfolioDescription text={props.summary} />
   </div>
 );

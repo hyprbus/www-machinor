@@ -4,9 +4,24 @@ import styled from 'styled-components';
 
 const Button = props => (
   <div className={props.className} onClick={props.click} >
-    {props.text}
+    <ButtonLabel>
+      {props.text}
+    </ButtonLabel>
   </div>
 );
+
+const ButtonLabel = styled.div`
+  display: inline;
+  font-size: 1.5em;
+  text-align: center;
+  background-color: ${props => props.theme.accentColor2};
+  color: ${props => props.theme.mainColor};
+  padding: 10px;
+  cursor: pointer;
+  &:hover {
+    text-decoration: underline;
+  }
+`;
 
 Button.propTypes = {
   className: PropTypes.string.isRequired,
@@ -16,13 +31,4 @@ Button.propTypes = {
 
 export default styled(Button)`
   font-family: ${props => props.theme.textFont}, ${props => props.theme.fallbackFont};
-  font-size: 1.5em;
-  text-align: center;
-  border: 1% solid  ${props => props.theme.mainColor};
-  background-color: ${props => props.theme.accentColor};
-  color: ${props => props.theme.mainColor};
-  padding: 0 2% 0 2%;
-  width: 30%;
-  margin: 10px auto 0 auto;
-  cursor: pointer;
 `;

@@ -1,12 +1,3 @@
-// props:
-//
-// visible=true/false
-// header=text
-// children = child component(s)
-// confirmationText = confirm button label
-// cancelModal() = cancel modal callback
-// approveModal() = approve modal callback
-
 import React from 'react';
 import PropTypes from 'prop-types';
 import styled, { css, keyframes } from 'styled-components';
@@ -14,6 +5,7 @@ import Button from './Button';
 import PortfolioHeader from './PortfolioHeader';
 import Text from './Text';
 import LinkElement from './LinkElement';
+import { theme } from './appSettings';
 
 class Modal extends React.Component {
   constructor(props) {
@@ -26,7 +18,6 @@ class Modal extends React.Component {
   }
 
   render() {
-    console.log(this.props.animateModal);
     if (!this.props.visible && this.props.animateModal === '') {
       return null;
     }
@@ -39,23 +30,66 @@ class Modal extends React.Component {
     return (
       <div className={this.props.className} >
         <ModalWindow>
-          <PortfolioHeader text={this.props.header} center />
-          <Text text={this.props.text} />
-          <div>{appSite}</div>
-          <div>{sourceSite}</div>
-          <Button text="Close" click={this.handleCancel} />
+          <ModalTop>
+            <PortfolioHeader
+              text={this.props.header}
+              center
+              backgroundColor={theme.backgroundColorC}
+            />
+          </ModalTop>
+          <ModalCenter>
+            <Text text={this.props.text} />
+            <div>{appSite}</div>
+            <div>{sourceSite}</div>
+          </ModalCenter>
+          <ModalBottom>
+            <Button text="Close" click={this.handleCancel} />
+          </ModalBottom>
         </ModalWindow>
       </div>
     );
   }
 }
 
+const enterAnimation = keyframes`
+  0% { transform: scale(0); }
+  75% { transform: scale(1); }
+  76% { background-color: rgba(0, 0, 0, 0); }
+  100% { background-color: rgba(0, 0, 0, .7); }
+}
+`;
+
+const exitAnimation = keyframes`
+0% { background-color: rgba(0, 0, 0, .7); }
+24% { background-color: rgba(0, 0, 0, 0); }
+25% { transform: scale(1); }
+100% { transform: scale(0); }
+`;
+
+const ModalTop = styled.div`
+  /* align-self: flex-start; */
+  width: 100%;
+`;
+const ModalCenter = styled.div`
+  width: 90%;
+  padding: 0 0 10px 0;
+`;
+const ModalBottom = styled.div`
+  /* align-self: flex-end; */
+  width: 90%;
+  padding: 20px 0 20px 0;
+`;
+
 const ModalWindow = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
   background-color: ${props => props.theme.backgroundColorA};
   width: 80%;
-  height: 70%;
-  margin: 5% auto 0 auto;
-  padding: 2% 5% 2% 5%;
+  max-width: 896px;
+  margin: 2% auto 2% auto;
+  padding: 0 0 10px 0;
 `;
 
 Modal.defaultProps = {
@@ -68,32 +102,13 @@ Modal.propTypes = {
   header: PropTypes.string,
   text: PropTypes.string,
   visible: PropTypes.bool.isRequired,
+  animateModal: PropTypes.string.isRequired,
   cancelModal: PropTypes.func.isRequired,
   site: PropTypes.string.isRequired,
   siteLabel: PropTypes.string.isRequired,
   sourceCode: PropTypes.string.isRequired,
   sourceCodeLabel: PropTypes.string.isRequired,
 };
-
-const enterAnimation = keyframes`
-from {
-  transform: scale(0);
-}
-
-to {
-  transform: scale(1);
-}
-`;
-
-const exitAnimation = keyframes`
-from {
-  transform: scale(1);
-}
-
-to {
-  transform: scale(0);
-}
-`;
 
 export default styled(Modal)`
   font-family: ${props => props.theme.textFont}, ${props => props.theme.fallbackFont};
@@ -105,15 +120,15 @@ export default styled(Modal)`
   bottom: 0;
   left: 0;
   right: 0;
-  background-color: rgba(0,0,0,0.3);
-  width: 100%; /* Full width */
+  width: 100
+  %; /* Full width */
   height: 100%; /* Full height */
   overflow: auto; /* Enable scroll if needed */
   margin: 0 auto;
   ${props => props.animateModal === 'in' && css`
-    animation: ${enterAnimation} .2s ease-in forwards;;
-  `}
+    animation: ${enterAnimation} .25s ease-in forwards;
+`}
   ${props => props.animateModal === 'out' && css`
-  animation: ${exitAnimation} .2s ease-in forwards;
+    animation: ${exitAnimation} .25s ease-in forwards;
   `}
 `;

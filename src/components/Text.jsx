@@ -17,6 +17,6 @@ Text.propTypes = {
 };
 
 export default styled(Text)`
-  font-family: ${props => props.theme.textFont}, ${props => props.theme.fallbackFont};
+  font-family: ${props => props.theme.textFont};
   font-size: 1em;
 `;

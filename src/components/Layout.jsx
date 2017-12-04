@@ -44,7 +44,7 @@ const Layout = (props) => {
       header: 'portfolio2',
       summary: 'portfolio2Desc',
       description: 'portfolio2FullText',
-      site: 'http://machinor-web-container.azurewebsites.net/',
+      site: '',
       sourceCode: 'https://github.com/hyprbus/www-machinor',
     },
     {
@@ -95,16 +95,18 @@ const Layout = (props) => {
       <Page>
         <Row>
           <SmallColumn>
-            <Logo color={theme.accentColor} />
-            <LanguageBar>
-              {languages}
-            </LanguageBar>
+            <Logo color={theme.accentColor2} />
           </SmallColumn>
           <Column>
             <Invader color={theme.mainColor} />
           </Column>
         </Row>
         <Row>
+          <Column>
+            <LanguageBar>
+              {languages}
+            </LanguageBar>
+          </Column>
           <Column>
             <Text text={txt(content, 'email')} />
           </Column>
@@ -121,12 +123,20 @@ const Layout = (props) => {
             <Text text={txt(content, 'aboutTxt1')} />
             <Text text={txt(content, 'aboutTxt2')} />
             <Text text={txt(content, 'aboutTxt3')} />
+          </Column>
+          <Column>
             <Heading text={txt(content, 'techSkillsHeader')} />
             <Text text={txt(content, 'techSkills')} />
-            <Heading text={txt(content, 'educationHeader')} />
-            <Text text={txt(content, 'educationText')} />
+          </Column>
+        </Row>
+        <Row>
+          <Column>
             <Heading text={txt(content, 'langSkillsHeader')} />
             <Text text={txt(content, 'langSkills')} />
+            <Heading text={txt(content, 'educationHeader')} />
+            <Text text={txt(content, 'educationText')} />
+          </Column>
+          <Column>
             <Heading text={txt(content, 'otherSkillsHeader')} />
             <Text text={txt(content, 'otherSkills1')} />
             <Text text={txt(content, 'otherSkills2')} />
@@ -134,7 +144,9 @@ const Layout = (props) => {
           </Column>
         </Row>
         <Row>
-          <Heading text={txt(content, 'portfolioHeader')} />
+          <Column>
+            <Heading text={txt(content, 'portfolioHeader')} />
+          </Column>
         </Row>
         <Row>
           {portfolio}
