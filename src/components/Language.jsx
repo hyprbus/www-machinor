@@ -1,6 +1,20 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import styled, { css } from 'styled-components';
+import theme from 'styled-theming';
+import { palette } from './appSettings';
+
+const color = theme('mode', {
+  techno: palette.techno.backgroundColorB,
+});
+
+const backgroundColor = theme('mode', {
+  techno: palette.techno.mainColor,
+});
+
+const font = theme('mode', {
+  techno: palette.techno.textFont,
+});
 
 class Language extends Component {
   constructor(props) {
@@ -37,9 +51,9 @@ export default styled(Language)`
   cursor: pointer;
   user-select: none;
   font-size: 0.8em;
-  font-family: ${props => props.theme.textFont};
+  font-family: ${font};
   ${props => props.langCode === props.selected && css`
-    color: ${props => props.theme.backgroundColorB};
-    background-color: ${props => props.theme.mainColor};
+    color: ${color};
+    background-color: ${backgroundColor};
   `}
 `;

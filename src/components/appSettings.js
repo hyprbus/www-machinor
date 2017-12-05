@@ -22,3 +22,26 @@ export const CONTENTSOURCE = '../data/content.json';
 
 // available languages
 export const LANGUAGES = ['en', 'fi', 'sv'];
+
+// palettes
+export const palette = {
+  techno: {
+    mainColor: '#ffffff',
+    backgroundColorA: '#c0b8b5',
+    backgroundColorB: '#9f9890',
+    backgroundColorC: '#191919',
+    bodyColor: '#080808',
+    accentColor: '#d1bb4e',
+    accentColor2: '#d60909',
+    linkHoverColor: '#d60909',
+    textFont: 'Roboto, sans-serif',
+    headerFont: '"Roboto Mono", monospace',
+  },
+};
+
+// responsivity values
+export const responsivityA = {
+  breakpointPhone: 768,
+  breakpointComputer: 1200,
+  maxWidth: '1200px',
+};

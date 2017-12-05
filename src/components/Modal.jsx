@@ -1,11 +1,23 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import styled, { css, keyframes } from 'styled-components';
+import theme from 'styled-theming';
 import Button from './Button';
 import PortfolioHeader from './PortfolioHeader';
 import Text from './Text';
 import LinkElement from './LinkElement';
-import { theme } from './appSettings';
+import { palette } from './appSettings';
+
+const color = theme('mode', {
+  techno: palette.techno.mainColor,
+});
+const backgroundColor = theme('mode', {
+  techno: palette.techno.backgroundColorA,
+});
+
+const font = theme('mode', {
+  techno: palette.techno.textFont,
+});
 
 class Modal extends React.Component {
   constructor(props) {
@@ -34,7 +46,7 @@ class Modal extends React.Component {
             <PortfolioHeader
               text={this.props.header}
               center
-              backgroundColor={theme.backgroundColorC}
+              backgroundColor={palette.techno.backgroundColorC}
             />
           </ModalTop>
           <ModalCenter>
@@ -85,7 +97,7 @@ const ModalWindow = styled.div`
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  background-color: ${props => props.theme.backgroundColorA};
+  background-color: ${backgroundColor};
   width: 80%;
   max-width: 896px;
   margin: 2% auto 2% auto;
@@ -102,7 +114,7 @@ Modal.propTypes = {
   header: PropTypes.string,
   text: PropTypes.string,
   visible: PropTypes.bool.isRequired,
-  animateModal: PropTypes.string.isRequired,
+  animateModal: PropTypes.oneOf(['', 'in', 'out']).isRequired,
   cancelModal: PropTypes.func.isRequired,
   site: PropTypes.string.isRequired,
   siteLabel: PropTypes.string.isRequired,
@@ -111,9 +123,9 @@ Modal.propTypes = {
 };
 
 export default styled(Modal)`
-  font-family: ${props => props.theme.textFont}, ${props => props.theme.fallbackFont};
+  font-family: ${font};
   font-size: 1em;
-  color: ${props => props.theme.mainColor};
+  color: ${color};
   position: fixed; /* Stay in place */
   z-index: 1; /* Sit on top */
   top: 0;

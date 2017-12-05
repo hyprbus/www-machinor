@@ -1,6 +1,20 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import styled from 'styled-components';
+import theme from 'styled-theming';
+import { palette } from './appSettings';
+
+const backgroundColor = theme('mode', {
+  techno: palette.techno.accentColor2,
+});
+
+const color = theme('mode', {
+  techno: palette.techno.mainColor,
+});
+
+const font = theme('mode', {
+  techno: palette.techno.textFont,
+});
 
 const Button = props => (
   <div className={props.className} onClick={props.click} >
@@ -14,8 +28,8 @@ const ButtonLabel = styled.div`
   display: inline;
   font-size: 1.5em;
   text-align: center;
-  background-color: ${props => props.theme.accentColor2};
-  color: ${props => props.theme.mainColor};
+  background-color: ${backgroundColor};
+  color: ${color};
   padding: 10px;
   cursor: pointer;
   &:hover {
@@ -30,5 +44,5 @@ Button.propTypes = {
 };
 
 export default styled(Button)`
-  font-family: ${props => props.theme.textFont}, ${props => props.theme.fallbackFont};
+  font-family: ${font};
 `;

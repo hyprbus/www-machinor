@@ -4,7 +4,6 @@ import { ThemeProvider, injectGlobal } from 'styled-components';
 import Page from './Page';
 import Row from './Row';
 import Column from './Column';
-import SmallColumn from './SmallColumn';
 import Modal from './Modal';
 import Logo from './Logo';
 import Invader from './Invader';
@@ -16,14 +15,14 @@ import Language from './Language';
 import Potato from '../images/potato.svg';
 import Alien from '../images/spaceinvader.svg';
 import Game from '../images/game.svg';
-import { theme } from './appSettings';
+import { palette } from './appSettings';
 import txt from '../functions/txt';
 
 const Layout = (props) => {
   injectGlobal`
     body {
       margin: 0;
-      background-color: ${theme.bodyColor};
+      background-color: ${palette.techno.bodyColor};
     }
   `;
 
@@ -60,7 +59,7 @@ const Layout = (props) => {
   portfolioData.forEach((p) => {
     const SVGElement = p.image;
     portfolio.push(
-      <SmallColumn key={p.header}>
+      <Column small key={p.header}>
         <PortfolioItem
           header={txt(content, p.header)}
           summary={txt(content, p.summary)}
@@ -73,11 +72,11 @@ const Layout = (props) => {
           sourceCodeLabel={txt(content, 'portfolioSourceCode')}
         >
           <SVGElement
-            fill={theme.accentColor}
+            fill={palette.techno.accentColor}
             opacity="0.5"
           />
         </PortfolioItem>
-      </SmallColumn>);
+      </Column>);
   });
 
   const lang = [{ label: 'EN', langCode: 'en' }, { label: 'FI', langCode: 'fi' }, { label: 'SV', langCode: 'sv' }];
@@ -91,14 +90,14 @@ const Layout = (props) => {
       changeLanguage={props.changeLanguage}
     />));
   return (
-    <ThemeProvider theme={theme}>
+    <ThemeProvider theme={{ mode: 'techno', responsivity: 'responsivityA', spacing: 'normal' }}>
       <Page>
         <Row>
-          <SmallColumn>
-            <Logo color={theme.accentColor2} />
-          </SmallColumn>
+          <Column small>
+            <Logo color={palette.techno.accentColor2} />
+          </Column>
           <Column>
-            <Invader color={theme.mainColor} />
+            <Invader color={palette.techno.mainColor} />
           </Column>
         </Row>
         <Row>
