@@ -1,6 +1,16 @@
 import React from 'react';
 import styled from 'styled-components';
+import theme from 'styled-theming';
 import PropTypes from 'prop-types';
+import { palette, responsive } from './appSettings';
+
+const backgroundColor = theme('mode', {
+  techno: palette.techno.bodyColor,
+});
+
+const maxWidth = theme('responsivity', {
+  responsivityA: responsive.responsivityA.maxWidth,
+});
 
 const Page = props => (
   <div className={props.className}>
@@ -18,7 +28,7 @@ Page.propTypes = {
 };
 
 export default styled(Page)`
-  max-width: 1200px;
+  max-width: ${maxWidth};
   margin: auto;
-  background-color: ${props => props.theme.backgroundColorB};
+  background-color: ${backgroundColor};
 `;

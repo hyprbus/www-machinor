@@ -1,6 +1,20 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import styled from 'styled-components';
+import theme from 'styled-theming';
+import { palette } from './appSettings';
+
+const color = theme('mode', {
+  techno: palette.techno.mainColor,
+});
+
+const hoverColor = theme('mode', {
+  techno: palette.techno.linkHoverColor,
+});
+
+const font = theme('mode', {
+  techno: palette.techno.textFont,
+});
 
 const Link = props => (
   <a className={props.className} href={props.link} target="_blank">
@@ -16,13 +30,13 @@ Link.propTypes = {
 
 export default styled(Link)`
   display: inline-block;
-  color: ${props => props.theme.mainColor};
-  font-family: ${props => props.theme.textFont}, ${props => props.theme.fallbackFont};
+  color: ${color};
+  font-family: ${font};
   font-size: 1em;
   text-decoration: none;
   margin: 2% 0 -5px 0;
   padding: 0;
   &:hover {
-    border-bottom: 5px solid ${props => props.theme.linkHoverColor};
+    border-bottom: 5px solid ${hoverColor};
   }
 `;

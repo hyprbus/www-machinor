@@ -1,6 +1,12 @@
 import React from 'react';
 import styled from 'styled-components';
+import theme from 'styled-theming';
 import PropTypes from 'prop-types';
+import { responsive } from './appSettings';
+
+const breakpointPhone = theme('responsivity', {
+  responsivityA: responsive.responsivityA.breakpointPhone,
+});
 
 const Row = props => (
   <div className={props.className}>
@@ -20,7 +26,7 @@ Row.propTypes = {
 export default styled(Row)`
   display: flex;
   flex-wrap: wrap;
-  @media screen and (max-width: ${props => props.theme.breakpointPhone}px) {
+  @media screen and (max-width: ${breakpointPhone}px) {
     display: block;
   }
 `;

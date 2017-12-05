@@ -1,6 +1,16 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import styled, { css } from 'styled-components';
+import theme from 'styled-theming';
+import { palette } from './appSettings';
+
+const color = theme('mode', {
+  techno: palette.techno.mainColor,
+});
+
+const headerFont = theme('mode', {
+  techno: palette.techno.headerFont,
+});
 
 const PortfolioHeader = (props) => {
   const { text } = props;
@@ -19,14 +29,15 @@ PortfolioHeader.propTypes = {
   className: PropTypes.string.isRequired,
   text: PropTypes.string.isRequired,
   center: PropTypes.bool,
+  backgroundColor: PropTypes.string.isRequired,
 };
 
 export default styled(PortfolioHeader)`
-  font-family: ${props => props.theme.headerFont}, ${props => props.theme.headerFallbackFont};
+  font-family: ${headerFont};
   font-size: 1.5em;
   text-align: center;
-  background-color: ${props => props.theme.backgroundColorA};
-  color: ${props => props.theme.mainColor};
+  background-color: ${props => props.backgroundColor};
+  color: ${color};
   padding: 1% 2% 1% 2%;
   margin: 0 0 .5em 0;
   ${props => !props.center && css`

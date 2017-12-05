@@ -1,6 +1,12 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import styled from 'styled-components';
+import theme from 'styled-theming';
+import { palette } from './appSettings';
+
+const font = theme('mode', {
+  techno: palette.techno.textFont,
+});
 
 const Text = (props) => {
   const { text } = props;
@@ -17,6 +23,6 @@ Text.propTypes = {
 };
 
 export default styled(Text)`
-  font-family: ${props => props.theme.textFont}, ${props => props.theme.fallbackFont};
+  font-family: ${font};
   font-size: 1em;
 `;

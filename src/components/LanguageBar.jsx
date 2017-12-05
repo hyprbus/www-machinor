@@ -18,5 +18,5 @@ LanguageBar.propTypes = {
 };
 
 export default styled(LanguageBar)`
-
+  margin: 0 0 2% 0;
 `;

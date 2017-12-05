@@ -4,7 +4,6 @@ import { ThemeProvider, injectGlobal } from 'styled-components';
 import Page from './Page';
 import Row from './Row';
 import Column from './Column';
-import SmallColumn from './SmallColumn';
 import Modal from './Modal';
 import Logo from './Logo';
 import Invader from './Invader';
@@ -16,14 +15,14 @@ import Language from './Language';
 import Potato from '../images/potato.svg';
 import Alien from '../images/spaceinvader.svg';
 import Game from '../images/game.svg';
-import { theme } from './appSettings';
+import { palette } from './appSettings';
 import txt from '../functions/txt';
 
 const Layout = (props) => {
   injectGlobal`
     body {
       margin: 0;
-      background-color: ${theme.bodyColor};
+      background-color: ${palette.techno.bodyColor};
     }
   `;
 
@@ -44,7 +43,7 @@ const Layout = (props) => {
       header: 'portfolio2',
       summary: 'portfolio2Desc',
       description: 'portfolio2FullText',
-      site: 'http://machinor-web-container.azurewebsites.net/',
+      site: '',
       sourceCode: 'https://github.com/hyprbus/www-machinor',
     },
     {
@@ -60,7 +59,7 @@ const Layout = (props) => {
   portfolioData.forEach((p) => {
     const SVGElement = p.image;
     portfolio.push(
-      <SmallColumn key={p.header}>
+      <Column small key={p.header}>
         <PortfolioItem
           header={txt(content, p.header)}
           summary={txt(content, p.summary)}
@@ -73,11 +72,11 @@ const Layout = (props) => {
           sourceCodeLabel={txt(content, 'portfolioSourceCode')}
         >
           <SVGElement
-            fill={theme.accentColor}
+            fill={palette.techno.accentColor}
             opacity="0.5"
           />
         </PortfolioItem>
-      </SmallColumn>);
+      </Column>);
   });
 
   const lang = [{ label: 'EN', langCode: 'en' }, { label: 'FI', langCode: 'fi' }, { label: 'SV', langCode: 'sv' }];
@@ -91,20 +90,22 @@ const Layout = (props) => {
       changeLanguage={props.changeLanguage}
     />));
   return (
-    <ThemeProvider theme={theme}>
+    <ThemeProvider theme={{ mode: 'techno', responsivity: 'responsivityA', spacing: 'normal' }}>
       <Page>
         <Row>
-          <SmallColumn>
-            <Logo color={theme.accentColor} />
-            <LanguageBar>
-              {languages}
-            </LanguageBar>
-          </SmallColumn>
+          <Column small>
+            <Logo color={palette.techno.accentColor2} />
+          </Column>
           <Column>
-            <Invader color={theme.mainColor} />
+            <Invader color={palette.techno.mainColor} />
           </Column>
         </Row>
         <Row>
+          <Column>
+            <LanguageBar>
+              {languages}
+            </LanguageBar>
+          </Column>
           <Column>
             <Text text={txt(content, 'email')} />
           </Column>
@@ -121,12 +122,20 @@ const Layout = (props) => {
             <Text text={txt(content, 'aboutTxt1')} />
             <Text text={txt(content, 'aboutTxt2')} />
             <Text text={txt(content, 'aboutTxt3')} />
+          </Column>
+          <Column>
             <Heading text={txt(content, 'techSkillsHeader')} />
             <Text text={txt(content, 'techSkills')} />
-            <Heading text={txt(content, 'educationHeader')} />
-            <Text text={txt(content, 'educationText')} />
+          </Column>
+        </Row>
+        <Row>
+          <Column>
             <Heading text={txt(content, 'langSkillsHeader')} />
             <Text text={txt(content, 'langSkills')} />
+            <Heading text={txt(content, 'educationHeader')} />
+            <Text text={txt(content, 'educationText')} />
+          </Column>
+          <Column>
             <Heading text={txt(content, 'otherSkillsHeader')} />
             <Text text={txt(content, 'otherSkills1')} />
             <Text text={txt(content, 'otherSkills2')} />
@@ -134,7 +143,9 @@ const Layout = (props) => {
           </Column>
         </Row>
         <Row>
-          <Heading text={txt(content, 'portfolioHeader')} />
+          <Column>
+            <Heading text={txt(content, 'portfolioHeader')} />
+          </Column>
         </Row>
         <Row>
           {portfolio}
