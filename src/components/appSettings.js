@@ -37,11 +37,16 @@ export const palette = {
     textFont: 'Roboto, sans-serif',
     headerFont: '"Roboto Mono", monospace',
   },
+  mono: {
+    mainColor: '#000000',
+  },
 };
 
 // responsivity values
-export const responsivityA = {
-  breakpointPhone: 768,
-  breakpointComputer: 1200,
-  maxWidth: '1200px',
+export const responsive = {
+  responsivityA: {
+    breakpointPhone: 768,
+    breakpointComputer: 1200,
+    maxWidth: '1200px',
+  },
 };

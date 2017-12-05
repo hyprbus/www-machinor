@@ -2,14 +2,14 @@ import React from 'react';
 import styled from 'styled-components';
 import theme from 'styled-theming';
 import PropTypes from 'prop-types';
-import { palette, responsivityA } from './appSettings';
+import { palette, responsive } from './appSettings';
 
 const backgroundColor = theme('mode', {
   techno: palette.techno.bodyColor,
 });
 
 const maxWidth = theme('responsivity', {
-  responsivityA: responsivityA.maxWidth,
+  responsivityA: responsive.responsivityA.maxWidth,
 });
 
 const Page = props => (

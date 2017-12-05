@@ -4,8 +4,8 @@ import React from 'react';
 import styled, { css } from 'styled-components';
 import PropTypes from 'prop-types';
 import theme from 'styled-theming';
-import { palette, responsivityA } from './appSettings';
-import { spacing } from './spacing';
+import { palette, responsive } from './appSettings';
+import spacing from './spacing';
 
 const backgroundColor = theme('mode', {
   techno: palette.techno.backgroundColorB,
@@ -13,14 +13,15 @@ const backgroundColor = theme('mode', {
 
 const color = theme('mode', {
   techno: palette.techno.mainColor,
+  mono: palette.mono.mainColor,
 });
 
 const breakpointComputer = theme('responsivity', {
-  responsivityA: responsivityA.breakpointComputer,
+  responsivityA: responsive.responsivityA.breakpointComputer,
 });
 
 const breakpointPhone = theme('responsivity', {
-  responsivityA: responsivityA.breakpointPhone,
+  responsivityA: responsive.responsivityA.breakpointPhone,
 });
 
 const margin = theme('spacing', {
@@ -42,13 +43,14 @@ const Column = props => (
 Column.defaultProps = {
   children: null,
   small: false,
+  spacing: 'normal',
 };
 
 Column.propTypes = {
   className: PropTypes.string.isRequired,
   children: PropTypes.node,
   small: PropTypes.bool,
-
+  spacing: PropTypes.oneOf(['none', 'normal']),
 };
 
 export default styled(Column)`

@@ -2,10 +2,10 @@ import React from 'react';
 import styled from 'styled-components';
 import theme from 'styled-theming';
 import PropTypes from 'prop-types';
-import { responsivityA } from './appSettings';
+import { responsive } from './appSettings';
 
 const breakpointPhone = theme('responsivity', {
-  responsivityA: responsivityA.breakpointPhone,
+  responsivityA: responsive.responsivityA.breakpointPhone,
 });
 
 const Row = props => (
