@@ -7,7 +7,7 @@ const spacing = {
   },
   none: {
     columnMargin: '0px',
-    columnPadding: '0x',
+    columnPadding: '4px',
   },
 };
 

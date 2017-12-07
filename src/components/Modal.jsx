@@ -9,10 +9,10 @@ import LinkElement from './LinkElement';
 import { palette } from './appSettings';
 
 const color = theme('mode', {
-  techno: palette.techno.mainColor,
+  techno: palette.techno.colorStandard,
 });
 const backgroundColor = theme('mode', {
-  techno: palette.techno.backgroundColorA,
+  techno: palette.techno.backgroundStandard,
 });
 
 const font = theme('mode', {
@@ -46,7 +46,7 @@ class Modal extends React.Component {
             <PortfolioHeader
               text={this.props.header}
               center
-              backgroundColor={palette.techno.backgroundColorC}
+              backgroundColor={palette.techno.backgroundComplement}
             />
           </ModalTop>
           <ModalCenter>

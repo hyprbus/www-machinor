@@ -22,6 +22,10 @@ Text.propTypes = {
   text: PropTypes.string.isRequired,
 };
 
+Text.defaultProps = {
+  variant: 'default',
+};
+
 export default styled(Text)`
   font-family: ${font};
   font-size: 1em;

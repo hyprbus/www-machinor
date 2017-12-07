@@ -5,11 +5,11 @@ import theme from 'styled-theming';
 import { palette } from './appSettings';
 
 const color = theme('mode', {
-  techno: palette.techno.mainColor,
+  techno: palette.techno.colorStandard,
 });
 
 const hoverColor = theme('mode', {
-  techno: palette.techno.linkHoverColor,
+  techno: palette.techno.hoverColor,
 });
 
 const font = theme('mode', {

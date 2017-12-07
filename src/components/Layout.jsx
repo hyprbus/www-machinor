@@ -59,7 +59,7 @@ const Layout = (props) => {
   portfolioData.forEach((p) => {
     const SVGElement = p.image;
     portfolio.push(
-      <Column small key={p.header}>
+      <Column small key={p.header} kind="default">
         <PortfolioItem
           header={txt(content, p.header)}
           summary={txt(content, p.summary)}
@@ -72,7 +72,7 @@ const Layout = (props) => {
           sourceCodeLabel={txt(content, 'portfolioSourceCode')}
         >
           <SVGElement
-            fill={palette.techno.accentColor}
+            fill={palette.techno.accentStandard}
             opacity="0.5"
           />
         </PortfolioItem>
@@ -90,52 +90,52 @@ const Layout = (props) => {
       changeLanguage={props.changeLanguage}
     />));
   return (
-    <ThemeProvider theme={{ mode: 'techno', responsivity: 'responsivityA', spacing: 'normal' }}>
+    <ThemeProvider theme={{ mode: 'techno', responsivity: 'responsivityA', spacing: 'none' }}>
       <Page>
         <Row>
-          <Column small>
-            <Logo color={palette.techno.accentColor2} />
+          <Column small kind="complement" >
+            <Logo color={palette.techno.accentComplement} />
           </Column>
-          <Column>
-            <Invader color={palette.techno.mainColor} />
+          <Column kind="default">
+            <Invader color={palette.techno.colorStandard} />
           </Column>
         </Row>
         <Row>
-          <Column>
+          <Column kind="fx">
             <LanguageBar>
               {languages}
             </LanguageBar>
           </Column>
-          <Column>
+          <Column kind="default">
             <Text text={txt(content, 'email')} />
           </Column>
-          <Column>
+          <Column kind="default">
             <Text text={txt(content, 'phone')} />
           </Column>
-          <Column>
+          <Column kind="default">
             <Text text={txt(content, 'company')} />
           </Column>
         </Row>
         <Row>
-          <Column>
+          <Column kind="default">
             <Heading text={txt(content, 'aboutHeader')} />
             <Text text={txt(content, 'aboutTxt1')} />
             <Text text={txt(content, 'aboutTxt2')} />
             <Text text={txt(content, 'aboutTxt3')} />
           </Column>
-          <Column>
+          <Column kind="default">
             <Heading text={txt(content, 'techSkillsHeader')} />
             <Text text={txt(content, 'techSkills')} />
           </Column>
         </Row>
         <Row>
-          <Column>
+          <Column kind="default">
             <Heading text={txt(content, 'langSkillsHeader')} />
             <Text text={txt(content, 'langSkills')} />
             <Heading text={txt(content, 'educationHeader')} />
             <Text text={txt(content, 'educationText')} />
           </Column>
-          <Column>
+          <Column kind="default">
             <Heading text={txt(content, 'otherSkillsHeader')} />
             <Text text={txt(content, 'otherSkills1')} />
             <Text text={txt(content, 'otherSkills2')} />
@@ -143,7 +143,7 @@ const Layout = (props) => {
           </Column>
         </Row>
         <Row>
-          <Column>
+          <Column kind="default">
             <Heading text={txt(content, 'portfolioHeader')} />
           </Column>
         </Row>

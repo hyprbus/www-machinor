@@ -7,7 +7,7 @@ import { palette } from './appSettings';
 
 const PortfolioSummary = props => (
   <div id="pSummaryTest" className={props.className}>
-    <PortfolioHeader text={props.header} center backgroundColor={palette.techno.backgroundColorA} />
+    <PortfolioHeader text={props.header} center backgroundColor={palette.techno.backgroundStandard} />
     <PortfolioDescription text={props.summary} />
   </div>
 );

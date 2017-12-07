@@ -4,8 +4,8 @@ import styled from 'styled-components';
 import theme from 'styled-theming';
 import { palette } from './appSettings';
 
-const accentColor = theme('mode', {
-  techno: palette.techno.accentColor,
+const accentStandard = theme('mode', {
+  techno: palette.techno.accentStandard,
 });
 
 const headerFont = theme('mode', {
@@ -25,7 +25,7 @@ Heading.propTypes = {
 
 export default styled(Heading)`
   font-family: ${headerFont};
-  color: ${accentColor};
+  color: ${accentStandard};
   font-size: 1em;
   font-weight: bold;
 `;
