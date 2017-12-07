@@ -8,6 +8,10 @@ const font = theme('mode', {
   techno: palette.techno.textFont,
 });
 
+const fontSize = theme('mode', {
+  techno: palette.techno.textSize,
+});
+
 const Text = (props) => {
   const { text } = props;
   return (
@@ -22,11 +26,9 @@ Text.propTypes = {
   text: PropTypes.string.isRequired,
 };
 
-Text.defaultProps = {
-  variant: 'default',
-};
-
 export default styled(Text)`
   font-family: ${font};
-  font-size: 1em;
+  font-size: ${fontSize};
+  margin: 0 0 1em 0;
+  line-height: 1.5;
 `;

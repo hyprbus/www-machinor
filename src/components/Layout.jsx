@@ -58,24 +58,23 @@ const Layout = (props) => {
   const portfolio = [];
   portfolioData.forEach((p) => {
     const SVGElement = p.image;
-    portfolio.push(
-      <Column small key={p.header} kind="default">
-        <PortfolioItem
-          header={txt(content, p.header)}
-          summary={txt(content, p.summary)}
-          text={txt(content, p.description)}
-          showModal={props.showModal}
-          portfolioId={p.header}
-          site={p.site}
-          siteLabel={txt(content, 'portfolioLink')}
-          sourceCode={p.sourceCode}
-          sourceCodeLabel={txt(content, 'portfolioSourceCode')}
-        >
-          <SVGElement
-            fill={palette.techno.accentStandard}
-            opacity="0.5"
-          />
-        </PortfolioItem>
+    portfolio.push(<Column small key={p.header} kind="default">
+      <PortfolioItem
+        header={txt(content, p.header)}
+        summary={txt(content, p.summary)}
+        text={txt(content, p.description)}
+        showModal={props.showModal}
+        portfolioId={p.header}
+        site={p.site}
+        siteLabel={txt(content, 'portfolioLink')}
+        sourceCode={p.sourceCode}
+        sourceCodeLabel={txt(content, 'portfolioSourceCode')}
+      >
+        <SVGElement
+          fill={palette.techno.accentStandard}
+          opacity="0.5"
+        />
+      </PortfolioItem>
       </Column>);
   });
 
@@ -93,30 +92,12 @@ const Layout = (props) => {
     <ThemeProvider theme={{ mode: 'techno', responsivity: 'responsivityA', spacing: 'none' }}>
       <Page>
         <Row>
-          <Column small kind="complement" >
+          <Column small kind="default" >
             <Logo color={palette.techno.accentComplement} />
-          </Column>
-          <Column kind="default">
-            <Invader color={palette.techno.colorStandard} />
-          </Column>
-        </Row>
-        <Row>
-          <Column kind="fx">
             <LanguageBar>
               {languages}
             </LanguageBar>
           </Column>
-          <Column kind="default">
-            <Text text={txt(content, 'email')} />
-          </Column>
-          <Column kind="default">
-            <Text text={txt(content, 'phone')} />
-          </Column>
-          <Column kind="default">
-            <Text text={txt(content, 'company')} />
-          </Column>
-        </Row>
-        <Row>
           <Column kind="default">
             <Heading text={txt(content, 'aboutHeader')} />
             <Text text={txt(content, 'aboutTxt1')} />
@@ -127,19 +108,25 @@ const Layout = (props) => {
             <Heading text={txt(content, 'techSkillsHeader')} />
             <Text text={txt(content, 'techSkills')} />
           </Column>
-        </Row>
-        <Row>
           <Column kind="default">
             <Heading text={txt(content, 'langSkillsHeader')} />
             <Text text={txt(content, 'langSkills')} />
             <Heading text={txt(content, 'educationHeader')} />
             <Text text={txt(content, 'educationText')} />
-          </Column>
-          <Column kind="default">
             <Heading text={txt(content, 'otherSkillsHeader')} />
             <Text text={txt(content, 'otherSkills1')} />
             <Text text={txt(content, 'otherSkills2')} />
             <Text text={txt(content, 'otherSkills3')} />
+          </Column>
+        </Row>
+        <Row>
+          <Column kind="default">
+            <Text text={txt(content, 'email')} />
+            <Text text={txt(content, 'phone')} />
+            <Text text={txt(content, 'company')} />
+          </Column>
+          <Column kind="default">
+            <Invader color={palette.techno.colorStandard} />
           </Column>
         </Row>
         <Row>
