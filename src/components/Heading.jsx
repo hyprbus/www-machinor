@@ -21,6 +21,11 @@ const Heading = props => (
 Heading.propTypes = {
   className: PropTypes.string.isRequired,
   text: PropTypes.string.isRequired,
+  align: PropTypes.string,
+};
+
+Heading.defaultProps = {
+  align: 'left',
 };
 
 export default styled(Heading)`
@@ -28,5 +33,6 @@ export default styled(Heading)`
   color: ${color};
   font-size: 1em;
   font-weight: bold;
+  text-align: ${props => props.align};
   margin: 0 0 .3em 0;
 `;

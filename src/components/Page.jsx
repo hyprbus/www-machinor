@@ -4,12 +4,24 @@ import theme from 'styled-theming';
 import PropTypes from 'prop-types';
 import { palette, responsive } from './appSettings';
 
+const marginBig = theme('responsivity', {
+  responsivityA: responsive.responsivityA.pageMarginLargeScreen,
+});
+
+const marginSmall = theme('responsivity', {
+  responsivityA: responsive.responsivityA.pageMarginSmallScreen,
+});
+
 const backgroundColor = theme('mode', {
   techno: palette.techno.bodyColor,
 });
 
 const maxWidth = theme('responsivity', {
   responsivityA: responsive.responsivityA.maxWidth,
+});
+
+const breakpointPhone = theme('responsivity', {
+  responsivityA: responsive.responsivityA.breakpointPhone,
 });
 
 const Page = props => (
@@ -29,6 +41,9 @@ Page.propTypes = {
 
 export default styled(Page)`
   max-width: ${maxWidth};
-  margin: auto;
+  margin: ${marginBig};
   background-color: ${backgroundColor};
+  @media screen and (max-width: ${breakpointPhone}px) {
+    margin: ${marginSmall};
+  }
 `;

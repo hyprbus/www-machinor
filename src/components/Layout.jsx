@@ -75,7 +75,7 @@ const Layout = (props) => {
           opacity="0.5"
         />
       </PortfolioItem>
-      </Column>);
+    </Column>);
   });
 
   const lang = [{ label: 'EN', langCode: 'en' }, { label: 'FI', langCode: 'fi' }, { label: 'SV', langCode: 'sv' }];
@@ -92,8 +92,21 @@ const Layout = (props) => {
     <ThemeProvider theme={{ mode: 'techno', responsivity: 'responsivityA', spacing: 'none' }}>
       <Page>
         <Row>
-          <Column small kind="default" >
-            <Logo color={palette.techno.accentComplement} />
+          <Column small kind="complement" >
+            <Logo color={palette.techno.colorStandard} />
+          </Column>
+          <Column kind="complement">
+            <Text text={txt(content, 'email')} align="center" />
+          </Column>
+          <Column kind="complement">
+            <Text text={txt(content, 'phone')} align="center" />
+          </Column>
+          <Column kind="complement">
+            <Text text={txt(content, 'company')} align="center" />
+          </Column>
+        </Row>
+        <Row>
+          <Column tablet kind="fx" >
             <LanguageBar>
               {languages}
             </LanguageBar>
@@ -120,18 +133,8 @@ const Layout = (props) => {
           </Column>
         </Row>
         <Row>
-          <Column kind="default">
-            <Text text={txt(content, 'email')} />
-            <Text text={txt(content, 'phone')} />
-            <Text text={txt(content, 'company')} />
-          </Column>
-          <Column kind="default">
-            <Invader color={palette.techno.colorStandard} />
-          </Column>
-        </Row>
-        <Row>
-          <Column kind="default">
-            <Heading text={txt(content, 'portfolioHeader')} />
+          <Column kind="complement">
+            <Heading text={txt(content, 'portfolioHeader')} align="center" />
           </Column>
         </Row>
         <Row>

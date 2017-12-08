@@ -13,9 +13,9 @@
   },
   {
     "id": "company",
-    "en": "Machinor | 2863481-4 | Helsinki, Finland",
-    "fi": "Machinor | 2863481-4 | Helsinki, Suomi",
-    "sv": "Machinor | 2863481-4 | Helsingfors, Finland"
+    "en": "2863481-4 | Helsinki",
+    "fi": "2863481-4 | Helsinki",
+    "sv": "2863481-4 | Helsingfors"
   },
   {
     "id": "aboutHeader",
@@ -43,15 +43,15 @@
   },
   {
     "id": "techSkillsHeader",
-    "en": "Technology Skills",
-    "fi": "Teknologiaosaaminen",
-    "sv": "Teknologikunskaper"
+    "en": "Technologies and Tools",
+    "fi": "Teknologiat ja työkalut",
+    "sv": "Teknologier och verktyg"
   },
   {
     "id": "techSkills",
-    "en": "HTML5, CSS3, SCSS, JavaScript/ES6, SVG, React, React Router, styled components, Node.js, npm, Webpack, SQL, Git/GitHub, Docker, Azure",
-    "fi": "HTML5, CSS3, SCSS, JavaScript/ES6, SVG, React, React Router, styled components, Node.js, npm, Webpack, SQL, Git/GitHub, Docker, Azure",
-    "sv": "HTML5, CSS3, SCSS, JavaScript/ES6, SVG, React, React Router, styled components, Node.js, npm, Webpack, SQL, Git/GitHub, Docker, Azure"
+    "en": "HTML5, CSS3, SCSS, JavaScript/ES6, SVG, React, React Router, styled components, Node.js, npm, Webpack, SQL, Visual Studio Code, Git/GitHub, Docker/Docker Hub, Azure",
+    "fi": "HTML5, CSS3, SCSS, JavaScript/ES6, SVG, React, React Router, styled components, Node.js, npm, Webpack, SQL, Visual Studio Code, Git/GitHub, Docker/Docker Hub, Azure",
+    "sv": "HTML5, CSS3, SCSS, JavaScript/ES6, SVG, React, React Router, styled components, Node.js, npm, Webpack, SQL, Visual Studio Code, Git/GitHub, Docker/Docker Hub, Azure"
   },
   {
     "id": "langSkillsHeader",
@@ -103,9 +103,9 @@
   },
   {
     "id": "portfolioHeader",
-    "en": "Showcase",
-    "fi": "Esimerkkejä",
-    "sv": "Exempel" 
+    "en": "[ Examples ]",
+    "fi": "[ Esimerkkejä ]",
+    "sv": "[ Exempel ]" 
   },
   {
     "id": "portfolioLink",

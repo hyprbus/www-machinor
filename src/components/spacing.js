@@ -2,12 +2,14 @@
 
 const spacing = {
   normal: {
-    columnMargin: '5px',
-    columnPadding: '5px',
+    columnMargin: '4px',
+    columnPadding: '4px',
+    generalSpacing: '4px',
   },
   none: {
     columnMargin: '0px',
     columnPadding: '4px',
+    generalSpacing: '4px',
   },
 };
 
