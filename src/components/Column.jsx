@@ -7,13 +7,24 @@ import theme from 'styled-theming';
 import { palette, responsive } from './appSettings';
 import spacing from './spacing';
 
-const backgroundColor = theme('mode', {
-  techno: palette.techno.backgroundColorB,
+const backgroundColor = theme.variants('mode', 'kind', {
+  default: {
+    techno: palette.techno.backgroundStandard,
+    mono: palette.mono.backgroundStandard,
+  },
+  complement: {
+    techno: palette.techno.backgroundComplement,
+    mono: palette.mono.backgroundAlternate,
+  },
+  fx: {
+    techno: palette.techno.accentComplement,
+    mono: palette.mono.backgroundAlternate,
+  },
 });
 
 const color = theme('mode', {
-  techno: palette.techno.mainColor,
-  mono: palette.mono.mainColor,
+  techno: palette.techno.colorStandard,
+  mono: palette.mono.colorStandard,
 });
 
 const breakpointComputer = theme('responsivity', {
@@ -40,17 +51,21 @@ const Column = props => (
   </div>
 );
 
-Column.defaultProps = {
-  children: null,
-  small: false,
-  spacing: 'normal',
-};
-
 Column.propTypes = {
   className: PropTypes.string.isRequired,
   children: PropTypes.node,
   small: PropTypes.bool,
+  tablet: PropTypes.bool,
   spacing: PropTypes.oneOf(['none', 'normal']),
+  kind: PropTypes.oneOf(['default', 'complement', 'fx']),
+};
+
+Column.defaultProps = {
+  children: null,
+  small: false,
+  tablet: false,
+  spacing: 'normal',
+  kind: 'default',
 };
 
 export default styled(Column)`
@@ -60,14 +75,18 @@ export default styled(Column)`
   margin: ${margin};
   padding: ${padding};   
   ${props => props.small && css`
-  @media screen and (min-width: ${breakpointComputer}px) {
-    min-width: 22%;
-    max-width: 25%;
-  }
-  @media screen and (min-width: ${breakpointPhone + 1}px) and (max-width: ${breakpointComputer - 1}px) {
-    min-width: 30%;
-    max-width: 33%;
-  }
+    @media screen and (min-width: ${breakpointComputer}px) {
+      min-width: 22%;
+      max-width: 25%;
+    }
+    @media screen and (min-width: ${breakpointPhone}px) and (max-width: ${breakpointComputer}px) {
+      min-width: 30%;
+      max-width: 33%;
+    }
   `}
+  ${props => props.tablet && css`
+  @media screen and (max-width: ${breakpointComputer}px) {
+    min-width: 100%;
   }
+`}
 `;

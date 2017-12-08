@@ -58,25 +58,24 @@ const Layout = (props) => {
   const portfolio = [];
   portfolioData.forEach((p) => {
     const SVGElement = p.image;
-    portfolio.push(
-      <Column small key={p.header}>
-        <PortfolioItem
-          header={txt(content, p.header)}
-          summary={txt(content, p.summary)}
-          text={txt(content, p.description)}
-          showModal={props.showModal}
-          portfolioId={p.header}
-          site={p.site}
-          siteLabel={txt(content, 'portfolioLink')}
-          sourceCode={p.sourceCode}
-          sourceCodeLabel={txt(content, 'portfolioSourceCode')}
-        >
-          <SVGElement
-            fill={palette.techno.accentColor}
-            opacity="0.5"
-          />
-        </PortfolioItem>
-      </Column>);
+    portfolio.push(<Column small key={p.header} kind="default">
+      <PortfolioItem
+        header={txt(content, p.header)}
+        summary={txt(content, p.summary)}
+        text={txt(content, p.description)}
+        showModal={props.showModal}
+        portfolioId={p.header}
+        site={p.site}
+        siteLabel={txt(content, 'portfolioLink')}
+        sourceCode={p.sourceCode}
+        sourceCodeLabel={txt(content, 'portfolioSourceCode')}
+      >
+        <SVGElement
+          fill={palette.techno.accentStandard}
+          opacity="0.5"
+        />
+      </PortfolioItem>
+    </Column>);
   });
 
   const lang = [{ label: 'EN', langCode: 'en' }, { label: 'FI', langCode: 'fi' }, { label: 'SV', langCode: 'sv' }];
@@ -90,52 +89,43 @@ const Layout = (props) => {
       changeLanguage={props.changeLanguage}
     />));
   return (
-    <ThemeProvider theme={{ mode: 'techno', responsivity: 'responsivityA', spacing: 'normal' }}>
+    <ThemeProvider theme={{ mode: 'techno', responsivity: 'responsivityA', spacing: 'none' }}>
       <Page>
         <Row>
-          <Column small>
-            <Logo color={palette.techno.accentColor2} />
+          <Column small kind="complement" >
+            <Logo color={palette.techno.colorStandard} />
           </Column>
-          <Column>
-            <Invader color={palette.techno.mainColor} />
+          <Column kind="complement">
+            <Text text={txt(content, 'email')} align="center" />
+          </Column>
+          <Column kind="complement">
+            <Text text={txt(content, 'phone')} align="center" />
+          </Column>
+          <Column kind="complement">
+            <Text text={txt(content, 'company')} align="center" />
           </Column>
         </Row>
         <Row>
-          <Column>
+          <Column tablet kind="fx" >
             <LanguageBar>
               {languages}
             </LanguageBar>
           </Column>
-          <Column>
-            <Text text={txt(content, 'email')} />
-          </Column>
-          <Column>
-            <Text text={txt(content, 'phone')} />
-          </Column>
-          <Column>
-            <Text text={txt(content, 'company')} />
-          </Column>
-        </Row>
-        <Row>
-          <Column>
+          <Column kind="default">
             <Heading text={txt(content, 'aboutHeader')} />
             <Text text={txt(content, 'aboutTxt1')} />
             <Text text={txt(content, 'aboutTxt2')} />
             <Text text={txt(content, 'aboutTxt3')} />
           </Column>
-          <Column>
+          <Column kind="default">
             <Heading text={txt(content, 'techSkillsHeader')} />
             <Text text={txt(content, 'techSkills')} />
           </Column>
-        </Row>
-        <Row>
-          <Column>
+          <Column kind="default">
             <Heading text={txt(content, 'langSkillsHeader')} />
             <Text text={txt(content, 'langSkills')} />
             <Heading text={txt(content, 'educationHeader')} />
             <Text text={txt(content, 'educationText')} />
-          </Column>
-          <Column>
             <Heading text={txt(content, 'otherSkillsHeader')} />
             <Text text={txt(content, 'otherSkills1')} />
             <Text text={txt(content, 'otherSkills2')} />
@@ -143,8 +133,8 @@ const Layout = (props) => {
           </Column>
         </Row>
         <Row>
-          <Column>
-            <Heading text={txt(content, 'portfolioHeader')} />
+          <Column kind="complement">
+            <Heading text={txt(content, 'portfolioHeader')} align="center" />
           </Column>
         </Row>
         <Row>

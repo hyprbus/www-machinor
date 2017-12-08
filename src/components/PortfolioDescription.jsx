@@ -5,11 +5,11 @@ import theme from 'styled-theming';
 import { palette } from './appSettings';
 
 const color = theme('mode', {
-  techno: palette.techno.mainColor,
+  techno: palette.techno.colorStandard,
 });
 
 const backgroundColor = theme('mode', {
-  techno: palette.techno.backgroundColorA,
+  techno: palette.techno.backgroundStandard,
 });
 
 const font = theme('mode', {

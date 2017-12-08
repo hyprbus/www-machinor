@@ -4,8 +4,8 @@ import styled from 'styled-components';
 import theme from 'styled-theming';
 import { palette } from './appSettings';
 
-const accentColor = theme('mode', {
-  techno: palette.techno.accentColor,
+const color = theme('mode', {
+  techno: palette.techno.colorStandard,
 });
 
 const headerFont = theme('mode', {
@@ -21,11 +21,18 @@ const Heading = props => (
 Heading.propTypes = {
   className: PropTypes.string.isRequired,
   text: PropTypes.string.isRequired,
+  align: PropTypes.string,
+};
+
+Heading.defaultProps = {
+  align: 'left',
 };
 
 export default styled(Heading)`
   font-family: ${headerFont};
-  color: ${accentColor};
+  color: ${color};
   font-size: 1em;
   font-weight: bold;
+  text-align: ${props => props.align};
+  margin: 0 0 .3em 0;
 `;

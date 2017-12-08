@@ -5,7 +5,7 @@ import theme from 'styled-theming';
 import { palette } from './appSettings';
 
 const color = theme('mode', {
-  techno: palette.techno.mainColor,
+  techno: palette.techno.colorStandard,
 });
 
 const headerFont = theme('mode', {
