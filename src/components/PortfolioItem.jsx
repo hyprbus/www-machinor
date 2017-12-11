@@ -1,7 +1,15 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import styled from 'styled-components';
+import theme from 'styled-theming';
+import { palette } from './appSettings';
+import PortfolioHeader from './PortfolioHeader';
 import PortfolioSummary from './PortfolioSummary';
+
+const backgroundColor = theme('mode', {
+  techno: palette.techno.backgroundStandard,
+  mono: palette.mono.backgroundStandard,
+});
 
 class PortfolioItem extends Component {
   constructor(props) {
@@ -28,7 +36,8 @@ class PortfolioItem extends Component {
         className={this.props.className}
         onClick={this.showAll}
       >
-        <PortfolioSummary header={this.props.header} summary={this.props.summary} />
+        <PortfolioHeader center text={this.props.header} />
+        <PortfolioSummary summary={this.props.summary} />
         {this.props.children}
       </div>
     );
@@ -56,4 +65,6 @@ PortfolioItem.propTypes = {
 export default styled(PortfolioItem)`
   position: relative;
   cursor: pointer;
+  background: ${backgroundColor};
+  height: 240px;
 `;

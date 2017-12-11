@@ -34,8 +34,7 @@ PortfolioDescription.propTypes = {
 export default styled(PortfolioDescription)`
   font-family: ${font};
   font-size: 1em;
-  background-color: ${backgroundColor};
+  /* background-color: ${backgroundColor}; */
   color: ${color};
-  padding: 1% 2% 1% 2%;
   margin: 1% 0 0 0;
 `;
