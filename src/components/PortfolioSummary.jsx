@@ -1,27 +1,30 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import styled from 'styled-components';
+import PortfolioHeader from './PortfolioHeader';
 import PortfolioDescription from './PortfolioDescription';
 
 const PortfolioSummary = props => (
   <div className={props.className}>
+    <PortfolioHeader text={props.header} center />
     <PortfolioDescription text={props.summary} />
   </div>
 );
 
 PortfolioSummary.defaultProps = {
   summary: '',
+  header: '',
 };
 
 PortfolioSummary.propTypes = {
   className: PropTypes.string.isRequired,
+  header: PropTypes.string,
   summary: PropTypes.string,
 };
 
 export default styled(PortfolioSummary)`
   position: absolute;
-/*  left: 5%;
-  transform: translate(-5%, 0); */
+  width: 90%;
   padding: 5%;
   top: 2em;
   opacity: 1;

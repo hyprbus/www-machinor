@@ -20,6 +20,6 @@ ImageFramer.defaultProps = {
 };
 
 export default styled(ImageFramer)`
-  padding: 0 25% 25% 25%;
+  padding: 20px 0 20px 0;
   align: ${props => props.align};
 `;

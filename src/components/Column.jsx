@@ -81,12 +81,12 @@ export default styled(Column)`
   padding: ${padding};   
   ${props => props.small && css`
     @media screen and (min-width: ${breakpointComputer}px) {
-      min-width: 22%;
-      max-width: 23%;
+      min-width: 24%;
+      max-width: 24%;
     }
     @media screen and (min-width: ${breakpointPhone}px) and (max-width: ${breakpointComputer}px) {
-      min-width: 30%;
-      /* max-width: 33%; */
+      min-width: 32%;
+      max-width: 32%;
     }
   `}
   ${props => props.tablet && css`

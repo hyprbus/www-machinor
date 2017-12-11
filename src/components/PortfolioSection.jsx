@@ -4,8 +4,8 @@ import styled from 'styled-components';
 import theme from 'styled-theming';
 import Row from './Row';
 import Column from './Column';
-import ImageFramer from './ImageFramer';
 import PortfolioItem from './PortfolioItem';
+import ImageFramer from './ImageFramer';
 import txt from '../functions/txt';
 import { palette } from './appSettings';
 
@@ -20,6 +20,10 @@ const PortfolioSection = (props) => {
     const SVGElement = styled(p.image)`
       fill: ${fill};
       opacity: .2;
+      height: 200px;
+      display: block;
+      margin-left: auto;
+      margin-right: auto;
     `;
     portfolio.push(<Column small key={p.header} kind="fx">
       <PortfolioItem
@@ -33,9 +37,9 @@ const PortfolioSection = (props) => {
         sourceCode={p.sourceCode}
         sourceCodeLabel={txt(content, 'portfolioSourceCode')}
       >
-        <ImageFramer>
-          <SVGElement />
-        </ImageFramer>
+      <ImageFramer>
+        <SVGElement />
+      </ImageFramer>
       </PortfolioItem>
     </Column>);
   });

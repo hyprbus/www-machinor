@@ -14,10 +14,11 @@ import { palette } from './appSettings';
 import txt from '../functions/txt';
 
 const Layout = (props) => {
+  const { siteStyle } = props;
   const { content } = props;
   if (content.length === 0) { return null; }
   return (
-    <ThemeProvider theme={{ mode: 'techno', responsivity: 'responsivityA', spacing: 'none' }}>
+    <ThemeProvider theme={{ mode: siteStyle, responsivity: 'responsivityA', spacing: 'none' }}>
       <Page>
         <Row>
           <Column small kind="fx" >
@@ -103,6 +104,7 @@ Layout.propTypes = {
   siteLabel: PropTypes.string.isRequired,
   sourceCode: PropTypes.string.isRequired,
   sourceCodeLabel: PropTypes.string.isRequired,
+  siteStyle: PropTypes.string.isRequired,
 };
 
 export default Layout;

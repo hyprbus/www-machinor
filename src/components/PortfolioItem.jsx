@@ -3,7 +3,6 @@ import PropTypes from 'prop-types';
 import styled from 'styled-components';
 import theme from 'styled-theming';
 import { palette } from './appSettings';
-import PortfolioHeader from './PortfolioHeader';
 import PortfolioSummary from './PortfolioSummary';
 
 const backgroundColor = theme('mode', {
@@ -36,8 +35,7 @@ class PortfolioItem extends Component {
         className={this.props.className}
         onClick={this.showAll}
       >
-        <PortfolioHeader center text={this.props.header} />
-        <PortfolioSummary summary={this.props.summary} />
+        <PortfolioSummary summary={this.props.summary} center header={this.props.header} />
         {this.props.children}
       </div>
     );
