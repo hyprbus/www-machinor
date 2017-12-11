@@ -1,115 +1,45 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { ThemeProvider, injectGlobal } from 'styled-components';
+import { ThemeProvider } from 'styled-components';
 import Page from './Page';
+import Portfolio from '../containers/Portfolio';
 import Row from './Row';
 import Column from './Column';
 import Modal from './Modal';
 import Logo from './Logo';
-import Invader from './Invader';
 import Heading from './Heading';
 import Text from './Text';
-import PortfolioItem from './PortfolioItem';
 import LanguageBar from './LanguageBar';
-import Language from './Language';
-import Potato from '../images/potato.svg';
-import Alien from '../images/spaceinvader.svg';
-import Game from '../images/game.svg';
 import { palette } from './appSettings';
 import txt from '../functions/txt';
 
 const Layout = (props) => {
-  injectGlobal`
-    body {
-      margin: 0;
-      background-color: ${palette.techno.bodyColor};
-    }
-  `;
-
+  const { siteStyle } = props;
   const { content } = props;
   if (content.length === 0) { return null; }
-
-  const portfolioData = [
-    {
-      image: Potato,
-      header: 'portfolio1',
-      summary: 'portfolio1Desc',
-      description: 'portfolio1FullText',
-      site: 'http://fatvegan.azurewebsites.net',
-      sourceCode: 'https://github.com/hyprbus/fatvegan',
-    },
-    {
-      image: Alien,
-      header: 'portfolio2',
-      summary: 'portfolio2Desc',
-      description: 'portfolio2FullText',
-      site: '',
-      sourceCode: 'https://github.com/hyprbus/www-machinor',
-    },
-    {
-      image: Game,
-      header: 'portfolio3',
-      summary: 'portfolio3Desc',
-      description: 'portfolio3FullText',
-      site: 'http://pandapropaganda.com/work/afrika_game/afrika.html',
-      sourceCode: '',
-    },
-  ];
-  const portfolio = [];
-  portfolioData.forEach((p) => {
-    const SVGElement = p.image;
-    portfolio.push(<Column small key={p.header} kind="default">
-      <PortfolioItem
-        header={txt(content, p.header)}
-        summary={txt(content, p.summary)}
-        text={txt(content, p.description)}
-        showModal={props.showModal}
-        portfolioId={p.header}
-        site={p.site}
-        siteLabel={txt(content, 'portfolioLink')}
-        sourceCode={p.sourceCode}
-        sourceCodeLabel={txt(content, 'portfolioSourceCode')}
-      >
-        <SVGElement
-          fill={palette.techno.accentStandard}
-          opacity="0.5"
-        />
-      </PortfolioItem>
-    </Column>);
-  });
-
-  const lang = [{ label: 'EN', langCode: 'en' }, { label: 'FI', langCode: 'fi' }, { label: 'SV', langCode: 'sv' }];
-  const languages = [];
-  lang.forEach(l =>
-    languages.push(<Language
-      key={l.langCode}
-      label={l.label}
-      langCode={l.langCode}
-      selected={props.language}
-      changeLanguage={props.changeLanguage}
-    />));
   return (
-    <ThemeProvider theme={{ mode: 'techno', responsivity: 'responsivityA', spacing: 'none' }}>
+    <ThemeProvider theme={{ mode: siteStyle, responsivity: 'responsivityA', spacing: 'none' }}>
       <Page>
         <Row>
-          <Column small kind="complement" >
+          <Column small kind="fx" >
             <Logo color={palette.techno.colorStandard} />
           </Column>
-          <Column kind="complement">
+          <Column kind="fx" center>
             <Text text={txt(content, 'email')} align="center" />
           </Column>
-          <Column kind="complement">
+          <Column kind="fx" center>
             <Text text={txt(content, 'phone')} align="center" />
           </Column>
-          <Column kind="complement">
+          <Column kind="fx" center>
             <Text text={txt(content, 'company')} align="center" />
           </Column>
         </Row>
         <Row>
-          <Column tablet kind="fx" >
-            <LanguageBar>
-              {languages}
-            </LanguageBar>
+          <Column tablet kind="fx">
+            <LanguageBar
+              selected={props.language}
+              changeLanguage={props.changeLanguage}
+            />
           </Column>
           <Column kind="default">
             <Heading text={txt(content, 'aboutHeader')} />
@@ -133,13 +63,17 @@ const Layout = (props) => {
           </Column>
         </Row>
         <Row>
-          <Column kind="complement">
-            <Heading text={txt(content, 'portfolioHeader')} align="center" />
+          <Column kind="fx">
+            <Heading
+              text={txt(content, 'portfolioHeader')}
+              align="center"
+            />
           </Column>
         </Row>
-        <Row>
-          {portfolio}
-        </Row>
+        <Portfolio
+          content={content}
+          showModal={props.showModal}
+        />
         <Modal
           visible={props.modalVisible}
           header={props.modalHeader}
@@ -170,6 +104,7 @@ Layout.propTypes = {
   siteLabel: PropTypes.string.isRequired,
   sourceCode: PropTypes.string.isRequired,
   sourceCodeLabel: PropTypes.string.isRequired,
+  siteStyle: PropTypes.string.isRequired,
 };
 
 export default Layout;

@@ -1,5 +1,5 @@
 import React from 'react';
-import styled from 'styled-components';
+import styled, { injectGlobal } from 'styled-components';
 import theme from 'styled-theming';
 import PropTypes from 'prop-types';
 import { palette, responsive } from './appSettings';
@@ -12,8 +12,12 @@ const marginSmall = theme('responsivity', {
   responsivityA: responsive.responsivityA.pageMarginSmallScreen,
 });
 
-const backgroundColor = theme('mode', {
+const bodyColor = theme('mode', {
   techno: palette.techno.bodyColor,
+});
+
+const backgroundColor = theme('mode', {
+  techno: palette.techno.colorComplement,
 });
 
 const maxWidth = theme('responsivity', {
@@ -24,11 +28,20 @@ const breakpointPhone = theme('responsivity', {
   responsivityA: responsive.responsivityA.breakpointPhone,
 });
 
-const Page = props => (
-  <div className={props.className}>
-    {props.children}
-  </div>
-);
+const Page = (props) => {
+  injectGlobal`
+    body {
+      margin: 0;
+      background-color: ${bodyColor};
+    }
+  `;
+  
+  return (
+    <div className={props.className}>
+      {props.children}
+    </div>
+  );
+};
 
 Page.defaultProps = {
   children: null,

@@ -14,7 +14,6 @@ const color = theme('mode', {
 const backgroundColor = theme('mode', {
   techno: palette.techno.backgroundStandard,
 });
-
 const font = theme('mode', {
   techno: palette.techno.textFont,
 });
@@ -46,7 +45,6 @@ class Modal extends React.Component {
             <PortfolioHeader
               text={this.props.header}
               center
-              backgroundColor={palette.techno.backgroundComplement}
             />
           </ModalTop>
           <ModalCenter>

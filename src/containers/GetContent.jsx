@@ -20,6 +20,7 @@ export default class GetContent extends Component {
       sourceCode: '',
       sourceCodeLabel: '',
       animateModal: '', // 'in', 'out', ''
+      siteStyle: 'techno',
     };
     this.getTextContent = this.getTextContent.bind(this);
     this.showModal = this.showModal.bind(this);
@@ -69,6 +70,7 @@ export default class GetContent extends Component {
   render() {
     return (
       <Layout
+        siteStyle={this.state.siteStyle}
         content={this.state.content}
         language={this.state.language}
         changeLanguage={this.getTextContent}

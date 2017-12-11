@@ -17,7 +17,7 @@ const backgroundColor = theme.variants('mode', 'kind', {
     mono: palette.mono.backgroundAlternate,
   },
   fx: {
-    techno: palette.techno.accentComplement,
+    techno: palette.techno.colorComplement,
     mono: palette.mono.backgroundAlternate,
   },
 });
@@ -55,6 +55,7 @@ Column.propTypes = {
   className: PropTypes.string.isRequired,
   children: PropTypes.node,
   small: PropTypes.bool,
+  center: PropTypes.bool,
   tablet: PropTypes.bool,
   spacing: PropTypes.oneOf(['none', 'normal']),
   kind: PropTypes.oneOf(['default', 'complement', 'fx']),
@@ -66,22 +67,26 @@ Column.defaultProps = {
   tablet: false,
   spacing: 'normal',
   kind: 'default',
+  center: false,
 };
 
 export default styled(Column)`
   flex: 1;
+  ${props => props.center && css`
+    align-self: center;
+  `}
   background-color: ${backgroundColor};
   color: ${color};
   margin: ${margin};
   padding: ${padding};   
   ${props => props.small && css`
     @media screen and (min-width: ${breakpointComputer}px) {
-      min-width: 22%;
-      max-width: 25%;
+      min-width: 24%;
+      max-width: 24%;
     }
     @media screen and (min-width: ${breakpointPhone}px) and (max-width: ${breakpointComputer}px) {
-      min-width: 30%;
-      max-width: 33%;
+      min-width: 32%;
+      max-width: 32%;
     }
   `}
   ${props => props.tablet && css`
