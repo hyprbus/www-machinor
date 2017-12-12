@@ -6,14 +6,12 @@ import { palette } from './appSettings';
 
 const color = theme('mode', {
   techno: palette.techno.colorStandard,
-});
-
-const hoverColor = theme('mode', {
-  techno: palette.techno.hoverColor,
+  mono: palette.mono.colorStandard,
 });
 
 const font = theme('mode', {
   techno: palette.techno.textFont,
+  mono: palette.mono.textFont,
 });
 
 const Link = props => (
@@ -37,6 +35,6 @@ export default styled(Link)`
   margin: 2% 0 -5px 0;
   padding: 0;
   &:hover {
-    border-bottom: 5px solid ${hoverColor};
+    border-bottom: 5px solid ${color};
   }
 `;

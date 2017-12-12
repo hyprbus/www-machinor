@@ -14,17 +14,27 @@ const backgroundColor = theme.variants('mode', 'kind', {
   },
   complement: {
     techno: palette.techno.backgroundComplement,
-    mono: palette.mono.backgroundAlternate,
+    mono: palette.mono.backgroundStandard,
   },
   fx: {
-    techno: palette.techno.colorComplement,
-    mono: palette.mono.backgroundAlternate,
+    techno: palette.techno.accentComplement,
+    mono: palette.mono.accentComplement,
   },
 });
 
-const color = theme('mode', {
-  techno: palette.techno.colorStandard,
-  mono: palette.mono.colorStandard,
+const color = theme.variants('mode', 'kind', {
+  default: {
+    techno: palette.techno.colorStandard,
+    mono: palette.mono.colorStandard,
+  },
+  complement: {
+    techno: palette.techno.colorComplement,
+    mono: palette.mono.colorStandard,
+  },
+  fx: {
+    techno: palette.techno.colorComplement,
+    mono: palette.techno.colorComplement,
+  },
 });
 
 const breakpointComputer = theme('responsivity', {
@@ -91,7 +101,7 @@ export default styled(Column)`
   `}
   ${props => props.tablet && css`
   @media screen and (max-width: ${breakpointComputer}px) {
-    min-width: 100%;
+    min-width: 95%;
   }
 `}
 `;

@@ -9,8 +9,7 @@ import Modal from './Modal';
 import Logo from './Logo';
 import Heading from './Heading';
 import Text from './Text';
-import LanguageBar from './LanguageBar';
-import { palette } from './appSettings';
+import SelectorGroup from './SelectorGroup';
 import txt from '../functions/txt';
 
 const Layout = (props) => {
@@ -18,27 +17,35 @@ const Layout = (props) => {
   const { content } = props;
   if (content.length === 0) { return null; }
   return (
-    <ThemeProvider theme={{ mode: siteStyle, responsivity: 'responsivityA', spacing: 'none' }}>
+    <ThemeProvider theme={{ mode: siteStyle, responsivity: 'responsivityA', spacing: 'normal' }}>
       <Page>
         <Row>
-          <Column small kind="fx" >
-            <Logo color={palette.techno.colorStandard} />
+          <Column small kind="complement" >
+            <Logo />
           </Column>
-          <Column kind="fx" center>
-            <Text text={txt(content, 'email')} align="center" />
+          <Column kind="complement" center>
+            <Text compact text={txt(content, 'email')} align="center" />
           </Column>
-          <Column kind="fx" center>
-            <Text text={txt(content, 'phone')} align="center" />
+          <Column kind="complement" center>
+            <Text compact text={txt(content, 'phone')} align="center" />
           </Column>
-          <Column kind="fx" center>
-            <Text text={txt(content, 'company')} align="center" />
+          <Column kind="complement" center>
+            <Text compact text={txt(content, 'company')} align="center" />
           </Column>
         </Row>
         <Row>
-          <Column tablet kind="fx">
-            <LanguageBar
+          <Column tablet kind="complement">
+            <SelectorGroup
+              id="languageSelector"
+              selectors={props.langSelectors}
               selected={props.language}
-              changeLanguage={props.changeLanguage}
+              changeSelector={props.changeLanguage}
+            />
+            <SelectorGroup
+              id="styleSelector"
+              selectors={props.styleSelectors}
+              selected={props.siteStyle}
+              changeSelector={props.changeStyle}
             />
           </Column>
           <Column kind="default">
@@ -63,10 +70,11 @@ const Layout = (props) => {
           </Column>
         </Row>
         <Row>
-          <Column kind="fx">
+          <Column kind="complement">
             <Heading
               text={txt(content, 'portfolioHeader')}
               align="center"
+              large
             />
           </Column>
         </Row>
@@ -93,6 +101,7 @@ const Layout = (props) => {
 Layout.propTypes = {
   content: PropTypes.PropTypes.arrayOf(PropTypes.object).isRequired,
   language: PropTypes.string.isRequired,
+  langSelectors: PropTypes.arrayOf(Object).isRequired,
   changeLanguage: PropTypes.func.isRequired,
   modalVisible: PropTypes.bool.isRequired,
   modalHeader: PropTypes.string.isRequired,
@@ -105,6 +114,8 @@ Layout.propTypes = {
   sourceCode: PropTypes.string.isRequired,
   sourceCodeLabel: PropTypes.string.isRequired,
   siteStyle: PropTypes.string.isRequired,
+  styleSelectors: PropTypes.arrayOf(Object).isRequired,
+  changeStyle: PropTypes.func.isRequired,
 };
 
 export default Layout;

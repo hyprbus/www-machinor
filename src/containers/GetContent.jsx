@@ -6,11 +6,15 @@ import PropTypes from 'prop-types';
 import readFile from '../functions/readFile';
 import Layout from '../components/Layout';
 
+const langSelectors = [{ label: 'EN', selectorCode: 'en' }, { label: 'FI', selectorCode: 'fi' }, { label: 'SV', selectorCode: 'sv' }];
+const styleSelectors = [{ label: 'default look', selectorCode: 'techno' }, { label: 'mono look', selectorCode: 'mono' }];
+
 export default class GetContent extends Component {
   constructor(props) {
     super(props);
     this.state = {
       content: [],
+      langSelectors,
       language: 'en',
       modalVisible: false,
       modalHeader: 'Generic Header',
@@ -19,12 +23,14 @@ export default class GetContent extends Component {
       siteLabel: '',
       sourceCode: '',
       sourceCodeLabel: '',
-      animateModal: '', // 'in', 'out', ''
+      animateModal: '', // oneOf 'in', 'out', ''
       siteStyle: 'techno',
+      styleSelectors,
     };
     this.getTextContent = this.getTextContent.bind(this);
     this.showModal = this.showModal.bind(this);
     this.hideModal = this.hideModal.bind(this);
+    this.setTheme = this.setTheme.bind(this);
   }
 
   componentDidMount() {
@@ -45,6 +51,12 @@ export default class GetContent extends Component {
         language,
       });
     });
+  }
+
+  setTheme(siteStyle) {
+    this.setState(prevState => ({
+      siteStyle,
+    }));
   }
 
   showModal(visible, modalHeader, modalText, site, siteLabel, sourceCode, sourceCodeLabel) {
@@ -71,8 +83,11 @@ export default class GetContent extends Component {
     return (
       <Layout
         siteStyle={this.state.siteStyle}
+        styleSelectors={this.state.styleSelectors}
+        changeStyle={this.setTheme}
         content={this.state.content}
         language={this.state.language}
+        langSelectors={this.state.langSelectors}
         changeLanguage={this.getTextContent}
         modalVisible={this.state.modalVisible}
         modalHeader={this.state.modalHeader}

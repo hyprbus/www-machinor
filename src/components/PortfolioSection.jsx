@@ -11,6 +11,7 @@ import { palette } from './appSettings';
 
 const fill = theme('mode', {
   techno: palette.techno.accentComplement,
+  mono: palette.mono.accentComplement,
 });
 
 const PortfolioSection = (props) => {
@@ -19,13 +20,13 @@ const PortfolioSection = (props) => {
   props.portfolioItems.forEach((p) => {
     const SVGElement = styled(p.image)`
       fill: ${fill};
-      opacity: .2;
+      opacity: .4;
       height: 200px;
       display: block;
       margin-left: auto;
       margin-right: auto;
     `;
-    portfolio.push(<Column small key={p.header} kind="fx">
+    portfolio.push(<Column small key={p.header} kind="complement">
       <PortfolioItem
         header={txt(content, p.header)}
         summary={txt(content, p.summary)}
@@ -37,9 +38,9 @@ const PortfolioSection = (props) => {
         sourceCode={p.sourceCode}
         sourceCodeLabel={txt(content, 'portfolioSourceCode')}
       >
-      <ImageFramer>
-        <SVGElement />
-      </ImageFramer>
+        <ImageFramer>
+          <SVGElement />
+        </ImageFramer>
       </PortfolioItem>
     </Column>);
   });

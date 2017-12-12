@@ -7,7 +7,12 @@ import PortfolioSummary from './PortfolioSummary';
 
 const backgroundColor = theme('mode', {
   techno: palette.techno.backgroundStandard,
-  mono: palette.mono.backgroundStandard,
+  mono: palette.mono.backgroundComplement,
+});
+
+const color = theme('mode', {
+  techno: palette.techno.colorStandard,
+  mono: palette.mono.colorComplement,
 });
 
 class PortfolioItem extends Component {
@@ -61,8 +66,13 @@ PortfolioItem.propTypes = {
 };
 
 export default styled(PortfolioItem)`
+  border-radius: 24px;
   position: relative;
   cursor: pointer;
+  color: ${color};
   background: ${backgroundColor};
   height: 240px;
+  &:hover svg {
+    opacity: .8;
+  }
 `;

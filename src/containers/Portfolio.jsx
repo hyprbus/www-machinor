@@ -33,22 +33,6 @@ const portfolioData = [
     site: 'http://pandapropaganda.com/work/afrika_game/afrika.html',
     sourceCode: '',
   },
-  {
-    image: Game,
-    header: 'portfolio3',
-    summary: 'portfolio3Desc',
-    description: 'portfolio3FullText',
-    site: 'http://pandapropaganda.com/work/afrika_game/afrika.html',
-    sourceCode: '',
-  },
-  {
-    image: Game,
-    header: 'portfolio3',
-    summary: 'portfolio3Desc',
-    description: 'portfolio3FullText',
-    site: 'http://pandapropaganda.com/work/afrika_game/afrika.html',
-    sourceCode: '',
-  },
 ];
 
 export default class Portfolio extends Component {
