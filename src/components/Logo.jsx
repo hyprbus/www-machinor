@@ -1,10 +1,18 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import styled from 'styled-components';
+import theme from 'styled-theming';
+import { palette } from './appSettings';
+
+const color = theme('mode', {
+  techno: palette.techno.accentComplement,
+  mono: palette.mono.accentComplement,
+});
 
 const Logo = props => (
-  <div>
+  <div className={props.className}>
     <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 940 100" enableBackground="new 0 0 940 100">
-      <g fill={props.color}>
+      <g>
         <path d="M0,0v100h140V0H0z M120,40v40h-20V40H80v40H60V40H40v40H20V40V20h20h20h20h20h20V40z" />
         <path d="M160,0v100h100V0H160z M240,60v20h-20V60h-20v20h-20V60V20h20h20h20V60z" />
         <path d="M280,0v100h100V0H280z M360,40h-40v20h40v20h-40h-20V60V40V20h20h40V40z" />
@@ -20,8 +28,9 @@ const Logo = props => (
 );
 
 Logo.propTypes = {
-  color: PropTypes.string.isRequired,
+  className: PropTypes.string.isRequired,
 };
 
-export default Logo;
-
+export default styled(Logo)`
+  fill: ${color}
+`;

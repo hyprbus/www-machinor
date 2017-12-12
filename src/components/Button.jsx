@@ -6,14 +6,17 @@ import { palette } from './appSettings';
 
 const backgroundColor = theme('mode', {
   techno: palette.techno.accentComplement,
+  mono: palette.mono.accentComplement,
 });
 
 const color = theme('mode', {
   techno: palette.techno.colorStandard,
+  mono: palette.techno.colorStandard,
 });
 
 const font = theme('mode', {
   techno: palette.techno.textFont,
+  mono: palette.mono.textFont,
 });
 
 const Button = props => (

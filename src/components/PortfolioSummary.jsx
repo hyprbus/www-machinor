@@ -25,8 +25,8 @@ PortfolioSummary.propTypes = {
 export default styled(PortfolioSummary)`
   position: absolute;
   width: 90%;
-  padding: 5%;
-  top: 2em;
+  padding: 0 5% 5% 5%;
+  top: .5em;
   opacity: 1;
   z-index: 1;
 `;

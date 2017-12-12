@@ -10,12 +10,15 @@ import { palette } from './appSettings';
 
 const color = theme('mode', {
   techno: palette.techno.colorStandard,
+  mono: palette.mono.colorStandard,
 });
 const backgroundColor = theme('mode', {
   techno: palette.techno.backgroundStandard,
+  mono: palette.mono.backgroundStandard,
 });
 const font = theme('mode', {
   techno: palette.techno.textFont,
+  mono: palette.mono.textFont,
 });
 
 class Modal extends React.Component {
