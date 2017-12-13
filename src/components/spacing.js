@@ -3,7 +3,7 @@
 const spacing = {
   normal: {
     columnMargin: '0px',
-    columnPadding: '5px 5px 5px 5px',
+    columnPadding: '5px 10px 5px 10px',
     selectorSpacing: '1em',
   },
   none: {
