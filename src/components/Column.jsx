@@ -17,8 +17,8 @@ const backgroundColor = theme.variants('mode', 'kind', {
     mono: palette.mono.backgroundStandard,
   },
   fx: {
-    techno: palette.techno.accentComplement,
-    mono: palette.mono.accentComplement,
+    techno: palette.techno.accentStandard,
+    mono: palette.mono.accentStandard,
   },
 });
 
@@ -33,7 +33,7 @@ const color = theme.variants('mode', 'kind', {
   },
   fx: {
     techno: palette.techno.colorComplement,
-    mono: palette.techno.colorComplement,
+    mono: palette.mono.colorComplement,
   },
 });
 
@@ -91,12 +91,12 @@ export default styled(Column)`
   padding: ${padding};   
   ${props => props.small && css`
     @media screen and (min-width: ${breakpointComputer}px) {
-      min-width: 24%;
-      max-width: 24%;
+      min-width: 23%;
+      max-width: 23%;
     }
     @media screen and (min-width: ${breakpointPhone}px) and (max-width: ${breakpointComputer}px) {
-      min-width: 32%;
-      max-width: 32%;
+      min-width: 31%;
+      max-width: 31%;
     }
   `}
   ${props => props.tablet && css`

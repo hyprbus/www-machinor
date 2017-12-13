@@ -10,6 +10,7 @@ import Logo from './Logo';
 import Heading from './Heading';
 import Text from './Text';
 import SelectorGroup from './SelectorGroup';
+import Contact from './Contact';
 import txt from '../functions/txt';
 
 const Layout = (props) => {
@@ -24,10 +25,14 @@ const Layout = (props) => {
             <Logo />
           </Column>
           <Column kind="complement" center>
-            <Text compact text={txt(content, 'email')} align="center" />
+            <Contact contactType="mail" contact={txt(content, 'email')}>
+              <Text compact text={txt(content, 'email')} align="center" />
+            </Contact>
           </Column>
           <Column kind="complement" center>
-            <Text compact text={txt(content, 'phone')} align="center" />
+            <Contact contactType="phone" contact={txt(content, 'phone')}>
+              <Text compact text={txt(content, 'phone')} align="center" />
+            </Contact>
           </Column>
           <Column kind="complement" center>
             <Text compact text={txt(content, 'company')} align="center" />
@@ -48,7 +53,7 @@ const Layout = (props) => {
               changeSelector={props.changeStyle}
             />
           </Column>
-          <Column kind="default">
+          <Column kind="fx">
             <Heading text={txt(content, 'aboutHeader')} />
             <Text text={txt(content, 'aboutTxt1')} />
             <Text text={txt(content, 'aboutTxt2')} />
