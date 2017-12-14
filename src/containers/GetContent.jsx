@@ -7,7 +7,7 @@ import readFile from '../functions/readFile';
 import Layout from '../components/Layout';
 
 const langSelectors = [{ label: 'EN', selectorCode: 'en' }, { label: 'FI', selectorCode: 'fi' }, { label: 'SV', selectorCode: 'sv' }];
-const styleSelectors = [{ label: 'default look', selectorCode: 'techno' }, { label: 'mono look', selectorCode: 'mono' }];
+const styleSelectors = [{ label: 'mono look', selectorCode: 'mono' }, { label: 'techno look', selectorCode: 'techno' }];
 
 export default class GetContent extends Component {
   constructor(props) {
@@ -24,7 +24,7 @@ export default class GetContent extends Component {
       sourceCode: '',
       sourceCodeLabel: '',
       animateModal: '', // oneOf 'in', 'out', ''
-      siteStyle: 'techno',
+      siteStyle: 'mono',
       styleSelectors,
     };
     this.getTextContent = this.getTextContent.bind(this);

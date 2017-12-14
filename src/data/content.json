@@ -1,9 +1,9 @@
 [
   {
     "id": "slogan",
-    "en": "I Design for Monkeys.",
-    "fi": "Minä suunnittelen apinoille.",
-    "sv": "Jag designar för apor."
+    "en": "Built for Monkeys.",
+    "fi": "Rakennettu apinoille.",
+    "sv": "Byggt för apor."
   },
   {
     "id": "phone",
@@ -25,27 +25,27 @@
   },
   {
     "id": "aboutHeader",
-    "en": "About",
-    "fi": "Machinorista",
-    "sv": "Om Machinor"
+    "en": "Hello There!",
+    "fi": "Hei siellä!",
+    "sv": "Hej där!"
   },
   {
     "id": "aboutTxt1",
-    "en": "Our modern lives are filled with vast amounts of digital information, but our eyes and mind are still those of a monkey. In order to understand something more complex than a few shapes, the brain has to work extra. Often, it fails.",
-    "fi": "Suunnittelen, muotoilen ja kehitän nykyaikaisia, selainpohjaisia käyttöliittymiä.",
-    "sv": "Jag planerar, designar och utvecklar moderna, webbaserade användargränssnitt."
+    "en": "Even though modern life is filled with information, our eyes and minds are still those of a monkey. To interpret information more complex than a few shapes, the brain has to work extra. Often, it fails.",
+    "fi": "Vaikka nykyaikainen elämä on informaatiota täynnä, ovat silmämme ja mielemme edelleen apinan. Tulkitakseen muutamaa hahmoa monimutkaisempaa informaatiota, aivojen täytyy tehdä ylimääräistä työtä. Usein ne epäonnistuvat.",
+    "sv": "Trots att det moderna livet är fullt av information, är våra ögon och sinnen fortfarande en apas. För att tolka information mer komplex än ett fåtal föremål, måste hjärnan jobba extra. Ofta misslyckas den."
   },
   {
     "id": "aboutTxt2",
-    "en": "I create user interfaces with your inner monkey as my main customer. By presenting information in a way we immediately grasp, usability and productivity soar.",
-    "fi": "Suurin syy siihen, miksi ryhdyin frontend-kehittäjäksi oli luodakseni käyttöliittymiä jotka tukevat luonnollista tapaamme tulkita visuaalista informaatiota: vähemmän tekstiä ja enemmän muotoja.",
-    "sv": "Den främsta orsaken till att jag blev frontendutvecklare var att skapa användargränssnitt som stöder det naturliga sättet hur vi tolkar visuell information: mindre text och mera former."
+    "en": "My solution to this is building user interfaces for our inner monkeys. By designing and visualising information in a way that our brain can effortlessly handle, usability and productivity soar.",
+    "fi": "Ratkaisuni tähän on kehittää käyttöliittymiä sisäiselle apinallemme. Visualisoimalla informaatiota tavalla, jolla aivomme voivat käsitellä vaivattomasti, käytettävyys ja tuottavuus lähtevät lentoon.",
+    "sv": "Min lösning på detta är att utveckla användargränssnitt för våra inre apa. Genom att visualisera information på ett sätt vår hjärna kan hantera utan ansträngning, skjuter användarheten och produktiviteten i höjden."
   },
   {
   "id": "aboutTxt3",
   "en": "Other professional interests: usability, lean software development.",
   "fi": "Muut ammatilliset kiinnostuksen kohteet: käytettävyys, lean-pohjainen ohjelmistokehitys.",
-  "sv": "Övriga professionella intressen: användbarhet, lean-baserad utveckling av mjukvara."
+  "sv": "Övriga professionella intressen: användbarhet, leanbaserad utveckling av mjukvara."
   },
   {
     "id": "techSkillsHeader",
@@ -55,9 +55,9 @@
   },
   {
     "id": "techSkills",
-    "en": "HTML5, CSS3, SCSS, JavaScript/ES6, SVG, React, React Router, styled components, Node.js, npm, Webpack, SQL, Visual Studio Code, Git/GitHub, Docker/Docker Hub, Azure",
-    "fi": "HTML5, CSS3, SCSS, JavaScript/ES6, SVG, React, React Router, styled components, Node.js, npm, Webpack, SQL, Visual Studio Code, Git/GitHub, Docker/Docker Hub, Azure",
-    "sv": "HTML5, CSS3, SCSS, JavaScript/ES6, SVG, React, React Router, styled components, Node.js, npm, Webpack, SQL, Visual Studio Code, Git/GitHub, Docker/Docker Hub, Azure"
+    "en": "Frontend development: HTML5, CSS3, SCSS, JavaScript/ES6, SVG, React, React Router, styled components, Node.js, npm, Webpack, SQL, Visual Studio Code, Git/GitHub, Docker/Docker Hub, Azure",
+    "fi": "Frontend-kehitys: HTML5, CSS3, SCSS, JavaScript/ES6, SVG, React, React Router, styled components, Node.js, npm, Webpack, SQL, Visual Studio Code, Git/GitHub, Docker/Docker Hub, Azure",
+    "sv": "Frontendutveckling: HTML5, CSS3, SCSS, JavaScript/ES6, SVG, React, React Router, styled components, Node.js, npm, Webpack, SQL, Visual Studio Code, Git/GitHub, Docker/Docker Hub, Azure"
   },
   {
     "id": "langSkillsHeader",
@@ -109,7 +109,7 @@
   },
   {
     "id": "portfolioHeader",
-    "en": "Examples",
+    "en": "Showcase",
     "fi": "Esimerkkejä",
     "sv": "Exempel" 
   },
