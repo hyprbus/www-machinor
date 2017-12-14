@@ -47,6 +47,6 @@ export const responsive = {
     maxWidth: '1200px',
     pageMarginSmallScreen: '0 auto 0 auto',
     pageMarginLargeScreen: '8px auto 0 auto',
-    xlHeaderPhone: '1.5em',
+    xlHeaderPhone: '2em',
   },
 };
