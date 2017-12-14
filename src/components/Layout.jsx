@@ -40,6 +40,7 @@ const Layout = (props) => {
         </Row>
         <Row>
           <Column tablet kind="complement">
+            <Heading text={txt(content, 'slogan')} extraLarge />
             <SelectorGroup
               id="languageSelector"
               selectors={props.langSelectors}
@@ -57,11 +58,11 @@ const Layout = (props) => {
             <Heading text={txt(content, 'aboutHeader')} />
             <Text text={txt(content, 'aboutTxt1')} />
             <Text text={txt(content, 'aboutTxt2')} />
-            <Text text={txt(content, 'aboutTxt3')} />
           </Column>
           <Column kind="default">
             <Heading text={txt(content, 'techSkillsHeader')} />
             <Text text={txt(content, 'techSkills')} />
+            <Text text={txt(content, 'aboutTxt3')} />
           </Column>
           <Column kind="default">
             <Heading text={txt(content, 'langSkillsHeader')} />
