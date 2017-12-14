@@ -6,7 +6,11 @@ import Button from './Button';
 import PortfolioHeader from './PortfolioHeader';
 import Text from './Text';
 import LinkElement from './LinkElement';
-import { palette } from './appSettings';
+import { palette, responsive } from './appSettings';
+
+const breakpointPhone = theme('responsivity', {
+  responsivityA: responsive.responsivityA.breakpointPhone,
+});
 
 const color = theme('mode', {
   techno: palette.techno.colorStandard,
@@ -80,7 +84,6 @@ const exitAnimation = keyframes`
 `;
 
 const ModalTop = styled.div`
-  /* align-self: flex-start; */
   width: 100%;
 `;
 const ModalCenter = styled.div`
@@ -88,7 +91,6 @@ const ModalCenter = styled.div`
   padding: 0 0 10px 0;
 `;
 const ModalBottom = styled.div`
-  /* align-self: flex-end; */
   width: 90%;
   padding: 20px 0 20px 0;
 `;
@@ -103,6 +105,9 @@ const ModalWindow = styled.div`
   max-width: 896px;
   margin: 2% auto 2% auto;
   padding: 0 0 10px 0;
+  @media screen and (max-width: ${breakpointPhone}px) {
+    width: 96%;
+  }
 `;
 
 Modal.defaultProps = {
@@ -133,10 +138,10 @@ export default styled(Modal)`
   bottom: 0;
   left: 0;
   right: 0;
-  width: 100
-  %; /* Full width */
-  height: 100%; /* Full height */
-  overflow: auto; /* Enable scroll if needed */
+  width: 100%;
+  /* Full width */
+  height: 100%;
+  overflow: auto;
   margin: 0 auto;
   ${props => props.animateModal === 'in' && css`
     animation: ${enterAnimation} .25s ease-in forwards;

@@ -9,7 +9,7 @@ import spacing from './spacing';
 
 const backgroundColor = theme.variants('mode', 'kind', {
   default: {
-    techno: palette.techno.backgroundStandard,
+    techno: palette.techno.backgroundAlternate,
     mono: palette.mono.backgroundStandard,
   },
   complement: {
@@ -17,14 +17,14 @@ const backgroundColor = theme.variants('mode', 'kind', {
     mono: palette.mono.backgroundStandard,
   },
   fx: {
-    techno: palette.techno.accentStandard,
+    techno: palette.techno.accentComplement,
     mono: palette.mono.accentStandard,
   },
 });
 
 const color = theme.variants('mode', 'kind', {
   default: {
-    techno: palette.techno.colorStandard,
+    techno: palette.techno.colorComplement,
     mono: palette.mono.colorStandard,
   },
   complement: {
@@ -32,7 +32,7 @@ const color = theme.variants('mode', 'kind', {
     mono: palette.mono.colorStandard,
   },
   fx: {
-    techno: palette.techno.colorComplement,
+    techno: palette.techno.colorStandard,
     mono: palette.mono.colorComplement,
   },
 });

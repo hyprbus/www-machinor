@@ -1,5 +1,11 @@
 [
   {
+    "id": "slogan",
+    "en": "I Design for Monkeys.",
+    "fi": "Minä suunnittelen apinoille.",
+    "sv": "Jag designar för apor."
+  },
+  {
     "id": "phone",
     "en": "+358 407066006",
     "fi": "040 7066006",
@@ -19,27 +25,27 @@
   },
   {
     "id": "aboutHeader",
-    "en": "Usability = Productivity",
-    "fi": "Käytettävyys = tuottavuus",
-    "sv": "Användbarhet = produktivitet"
+    "en": "About",
+    "fi": "Machinorista",
+    "sv": "Om Machinor"
   },
   {
     "id": "aboutTxt1",
-    "en": "I plan, design and develop modern user interfaces for web browsers.",
+    "en": "Our modern lives are filled with vast amounts of digital information, but our eyes and mind are still those of a monkey. In order to understand something more complex than a few shapes, the brain has to work extra. Often, it fails.",
     "fi": "Suunnittelen, muotoilen ja kehitän nykyaikaisia, selainpohjaisia käyttöliittymiä.",
     "sv": "Jag planerar, designar och utvecklar moderna, webbaserade användargränssnitt."
   },
   {
     "id": "aboutTxt2",
-    "en": "My main reason for becoming a frontend developer was creating user interfaces that support the natural way we interpret visual information: less text and more shapes.",
+    "en": "I create user interfaces with your inner monkey as my main customer. By presenting information in a way we immediately grasp, usability and productivity soar.",
     "fi": "Suurin syy siihen, miksi ryhdyin frontend-kehittäjäksi oli luodakseni käyttöliittymiä jotka tukevat luonnollista tapaamme tulkita visuaalista informaatiota: vähemmän tekstiä ja enemmän muotoja.",
     "sv": "Den främsta orsaken till att jag blev frontendutvecklare var att skapa användargränssnitt som stöder det naturliga sättet hur vi tolkar visuell information: mindre text och mera former."
   },
   {
   "id": "aboutTxt3",
-  "en": "Other professional interests: lean software development.",
-  "fi": "Muut ammatilliset kiinnostuksen kohteet: lean-pohjainen ohjelmistokehitys.",
-  "sv": "Övriga professionella intressen: lean-baserad utveckling av mjukvara."
+  "en": "Other professional interests: usability, lean software development.",
+  "fi": "Muut ammatilliset kiinnostuksen kohteet: käytettävyys, lean-pohjainen ohjelmistokehitys.",
+  "sv": "Övriga professionella intressen: användbarhet, lean-baserad utveckling av mjukvara."
   },
   {
     "id": "techSkillsHeader",
@@ -145,7 +151,7 @@
   },
   {
     "id": "portfolio2Desc",
-    "en": "Single page website",
+    "en": "This website",
     "fi": "Machinorin sivusto",
     "sv": "Machinors sajt" 
   },

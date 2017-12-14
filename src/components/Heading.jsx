@@ -2,11 +2,19 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import styled, { css } from 'styled-components';
 import theme from 'styled-theming';
-import { palette } from './appSettings';
+import { palette, responsive } from './appSettings';
 
 const headerFont = theme('mode', {
   techno: palette.techno.headerFont,
   mono: palette.mono.headerFont,
+});
+
+const xlFontSizePhone = theme('responsivity', {
+  responsivityA: responsive.responsivityA.xlHeaderPhone,
+});
+
+const breakpointPhone = theme('responsivity', {
+  responsivityA: responsive.responsivityA.breakpointPhone,
 });
 
 const Heading = props => (
@@ -20,11 +28,13 @@ Heading.propTypes = {
   text: PropTypes.string.isRequired,
   align: PropTypes.string,
   large: PropTypes.bool,
+  extraLarge: PropTypes.bool,
 };
 
 Heading.defaultProps = {
   align: 'left',
   large: false,
+  extraLarge: false,
 };
 
 export default styled(Heading)`
@@ -35,7 +45,13 @@ export default styled(Heading)`
     font-size: 1.5em;
     margin: .5em 0 0 0;
   `}
+  ${props => props.extraLarge && css`
+  font-size: 3em;
+  @media screen and (max-width: ${breakpointPhone}px) {
+    font-size: ${xlFontSizePhone};
+  }
+  margin: 0 0 .5em 0;
+`}
   font-weight: bold;
   text-align: ${props => props.align};
-
 `;

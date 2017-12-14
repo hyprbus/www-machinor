@@ -9,7 +9,7 @@ export const palette = {
     colorStandard: '#ffffff',
     colorComplement: '#000000',
     backgroundStandard: '#8b7e6f',
-    backgroundAlternate: '#c0b8b5',
+    backgroundAlternate: '#ece2de',
     backgroundComplement: '#ffffff',
     bodyColor: '#024fe0',
     accentStandard: '#cace6f',
@@ -47,5 +47,6 @@ export const responsive = {
     maxWidth: '1200px',
     pageMarginSmallScreen: '0 auto 0 auto',
     pageMarginLargeScreen: '8px auto 0 auto',
+    xlHeaderPhone: '1.5em',
   },
 };
