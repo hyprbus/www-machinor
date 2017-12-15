@@ -1,9 +1,9 @@
 [
   {
     "id": "slogan",
-    "en": "Built for Monkeys.",
-    "fi": "Rakennettu apinoille.",
-    "sv": "Byggt för apor."
+    "en": "I Design for Monkeys.",
+    "fi": "Suunnittelen apinoille.",
+    "sv": "Jag designar för apor."
   },
   {
     "id": "phone",
@@ -31,15 +31,15 @@
   },
   {
     "id": "aboutTxt1",
-    "en": "Even though modern life is filled with information, our eyes and minds are still those of a monkey. To interpret information more complex than a few shapes, the brain has to work extra. Often, it fails.",
-    "fi": "Vaikka nykyaikainen elämä on informaatiota täynnä, ovat silmämme ja mielemme edelleen apinan. Tulkitakseen muutamaa hahmoa monimutkaisempaa informaatiota, aivojen täytyy tehdä ylimääräistä työtä. Usein ne epäonnistuvat.",
-    "sv": "Trots att det moderna livet är fullt av information, är våra ögon och sinnen fortfarande en apas. För att tolka information mer komplex än ett fåtal föremål, måste hjärnan jobba extra. Ofta misslyckas den."
+    "en": "Modern society is loaded with information, but our eyes and mind are still optimised for the simple life of a monkey. This means that when faced with information more complex than a few shapes, the brain has to do extra work. Often, it fails.",
+    "fi": "Nykyaikainen yhteiskunta pursuaa informaatiota, mutta silmämme ja mielemme on edelleen optimoitu apinan yksinkertaista elämää varten. Tämä tarkoittaa, että kun aivot kohtaavat hiemankin monimutkaisempaa informaatiota, niiden täytyy tehdä ylimääräistä työtä. Usein ne epäonnistuvat.",
+    "sv": "Det moderna samhället är fullastat med information, men våra ögon och sinnen är fortfarande optimerade för en apas enkla liv. Det här betyder att då hjärnan utsätts för information mer komplex än ett fåtal föremål, måste den jobba extra. Ofta misslyckas den."
   },
   {
     "id": "aboutTxt2",
-    "en": "My solution to this is building user interfaces for our inner monkeys. By designing and visualising information in a way that our brain can effortlessly handle, usability and productivity soar.",
-    "fi": "Ratkaisuni tähän on kehittää käyttöliittymiä sisäiselle apinallemme. Visualisoimalla informaatiota tavalla, jolla aivomme voivat käsitellä vaivattomasti, käytettävyys ja tuottavuus lähtevät lentoon.",
-    "sv": "Min lösning på detta är att utveckla användargränssnitt för våra inre apa. Genom att visualisera information på ett sätt vår hjärna kan hantera utan ansträngning, skjuter användarheten och produktiviteten i höjden."
+    "en": "I solve this problem by building user interfaces for our inner monkey. By structuring and visualising information in a way that actually suits our brain, software usability will soar.",
+    "fi": "Ratkaisen tämän ongelman kehitämällä käyttöliittymiä sisäiselle apinallemme. Strukturoimalla ja visualisoimalla informaatiota tavalla, joka oikeasti sopii aivoillemme, sovellusten käytettävyys lähtee lentoon.",
+    "sv": "För att lösa detta, utvecklar jag användargränssnitt för vår inre apa. Genom att strukturera och visualisera information på ett sätt som faktiskt lämpar sig för vår hjärna, når applikationers användbarhet nya höjder."
   },
   {
   "id": "aboutTxt3",
