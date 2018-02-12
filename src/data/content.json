@@ -42,10 +42,10 @@
     "sv": "För att lösa detta, utvecklar jag användargränssnitt för vår inre apa. Genom att strukturera och visualisera information på ett sätt som faktiskt lämpar sig för vår hjärna, når applikationers användbarhet nya höjder."
   },
   {
-  "id": "aboutTxt3",
-  "en": "Other professional interests: usability, lean software development.",
-  "fi": "Muut ammatilliset kiinnostuksen kohteet: käytettävyys, lean-pohjainen ohjelmistokehitys.",
-  "sv": "Övriga professionella intressen: användbarhet, leanbaserad utveckling av mjukvara."
+    "id": "aboutTxt3",
+    "en": "Other professional interests: usability, lean software development.",
+    "fi": "Muut ammatilliset kiinnostuksen kohteet: käytettävyys, lean-pohjainen ohjelmistokehitys.",
+    "sv": "Övriga professionella intressen: användbarhet, leanbaserad utveckling av mjukvara."
   },
   {
     "id": "techSkillsHeader",
@@ -55,9 +55,9 @@
   },
   {
     "id": "techSkills",
-    "en": "Frontend development: HTML5, CSS3, SCSS, JavaScript/ES6, SVG, React, React Router, styled components, Node.js, npm, Webpack, SQL, Visual Studio Code, Git/GitHub, Docker/Docker Hub, Azure",
-    "fi": "Frontend-kehitys: HTML5, CSS3, SCSS, JavaScript/ES6, SVG, React, React Router, styled components, Node.js, npm, Webpack, SQL, Visual Studio Code, Git/GitHub, Docker/Docker Hub, Azure",
-    "sv": "Frontendutveckling: HTML5, CSS3, SCSS, JavaScript/ES6, SVG, React, React Router, styled components, Node.js, npm, Webpack, SQL, Visual Studio Code, Git/GitHub, Docker/Docker Hub, Azure"
+    "en": "Frontend development: HTML5, CSS3, SCSS, JavaScript/ES6, TypeScript, SVG, React, Redux, React Router, styled components, Jest, Node.js, npm, Webpack, SQL, Visual Studio Code, Git/GitHub, Docker/Docker Hub, Azure",
+    "fi": "Frontend-kehitys: HTML5, CSS3, SCSS, JavaScript/ES6, TypeScript, SVG, React, Redux, React Router, styled components, Jest, Node.js, npm, Webpack, SQL, Visual Studio Code, Git/GitHub, Docker/Docker Hub, Azure",
+    "sv": "Frontendutveckling: HTML5, CSS3, SCSS, JavaScript/ES6, TypeScript, SVG, React, Redux, React Router, styled components, Jest, Node.js, npm, Webpack, SQL, Visual Studio Code, Git/GitHub, Docker/Docker Hub, Azure"
   },
   {
     "id": "langSkillsHeader",
@@ -111,7 +111,7 @@
     "id": "portfolioHeader",
     "en": "Showcase",
     "fi": "Esimerkkejä",
-    "sv": "Exempel" 
+    "sv": "Exempel"
   },
   {
     "id": "portfolioLink",
@@ -129,54 +129,72 @@
     "id": "portfolio1",
     "en": "Fat Vegan",
     "fi": "Fat Vegan",
-    "sv": "Fat Vegan" 
+    "sv": "Fat Vegan"
   },
   {
     "id": "portfolio1Desc",
     "en": "Conceptual restaurant website",
     "fi": "Konseptisivusto ravintolalle",
-    "sv": "Konceptsajt för restaurang" 
+    "sv": "Konceptsajt för restaurang"
   },
   {
     "id": "portfolio1FullText",
     "en": "A conceptual restaurant website, designed primarily for mobile user. My main goal was to make a website that feels like more like an app and less than a website. I also tried to minimise the number of clicks an average customer needs on the site: always showing the most important menu items, viewing the menu, booking a table and finding contact information. Main technologies: React, React Router, react-transition-group animation library.",
     "fi": "Konseptisivusto ravintolalle, suunniteltu ensisijaisesti mobiilikäyttäjille. Päätavoitteeni oli suunnitella webbsivut, jotka tuntuvat enemmän appilta ja vähemmän perinteiseltä webbisaitilta. Yritin myös minimoida tarvittavien klikkausten lukumäärän keskivertoasiakkaalle: keskeiset valikkovalinnat aina näkyvillä, ruokalistan selailu, pöydän varaaminen, yhteystietojen löytäminen jne. Teknologiat: React, React Router, react-transition-group animaatiokirjasto.",
-    "sv": "Konceptsajt för restaurang, designad primärt för mobila användare. Mitt främsta mål var att göra en webbsajt som känns mer som en app och mindre som en traditionell sajt. Jag försökte även minimera antalet gånger en genomsnittskund behöver klicka för att uppnå resultat: alltid visa de viktigaste menyvalen, bläddra i matsedeln, reservera bord, hitta kontaktinformation osv. Teknologier och bibliotek: React, React Router och react-transition-group för animationer." 
+    "sv": "Konceptsajt för restaurang, designad primärt för mobila användare. Mitt främsta mål var att göra en webbsajt som känns mer som en app och mindre som en traditionell sajt. Jag försökte även minimera antalet gånger en genomsnittskund behöver klicka för att uppnå resultat: alltid visa de viktigaste menyvalen, bläddra i matsedeln, reservera bord, hitta kontaktinformation osv. Teknologier och bibliotek: React, React Router och react-transition-group för animationer."
   },
   {
     "id": "portfolio2",
     "en": "Machinor",
     "fi": "Machinor",
-    "sv": "Machinor" 
+    "sv": "Machinor"
   },
   {
     "id": "portfolio2Desc",
     "en": "This website",
     "fi": "Machinorin sivusto",
-    "sv": "Machinors sajt" 
+    "sv": "Machinors sajt"
   },
   {
     "id": "portfolio2FullText",
     "en": "This website, implemented as a single page app with React. The content in different languages is rendered dynamically from a JSON file. CSS Styling is done with the styled-components library, which also enables the different visual themes for the site.",
     "fi": "Tämä sivusto, toteutettu ns Single Page Application:ina Reactilla. Monikielinen sisältö luodaan dynaamisesti JSON-tiedostosta. CSS-ulkoasu on toteutettu styled-components -kirjastolla, joka myös mahdollistaa sivuston eri ilmeet.",
-    "sv": "Denna sajt, implementerad som en så kallad Single Page Application. Det flerspråkiga innehållet skapas dynamiskt från en fil i JSON-format. Formgivningen med CSS är implementerad med hjälp av styled-components-biblioteket, vilket även möjliggör sajtens olika visuella alternativ." 
+    "sv": "Denna sajt, implementerad som en så kallad Single Page Application. Det flerspråkiga innehållet skapas dynamiskt från en fil i JSON-format. Formgivningen med CSS är implementerad med hjälp av styled-components-biblioteket, vilket även möjliggör sajtens olika visuella alternativ."
   },
   {
     "id": "portfolio3",
     "en": "Africa's Star",
     "fi": "Afrikan tähti",
-    "sv": "Afrikas stjärna" 
+    "sv": "Afrikas stjärna"
   },
   {
     "id": "portfolio3Desc",
     "en": "A simple board game",
     "fi": "Yksinkertainen lautapeli",
-    "sv": "Ett enkelt brädspel" 
+    "sv": "Ett enkelt brädspel"
   },
   {
     "id": "portfolio3FullText",
     "en": "A very simple and completely manual board game, based on the popular Finnish game Star of Africa. It was the first application I implemented after taking up JavaScript in early 2017, so I am the first to admit that the code looks quite awful! However, the most important thing at that stage was being able to execute on an idea from start to finish - which I did. Pure HTML, CSS and JavaScript - no libraries.",
     "fi": "Yksinkertainen ja täysin manuaalinen lautapeli, perustuen Afrikan tähteen. Tämä oli ensimmäinen kirjoittamani sovellus sen jälkeen kun aloitin JavaScriptillä vuoden 2017 alussa, joten olen ensimmäinen myöntämään, että koodi näyttää hirveältä! Tärkeintä minulle siinä vaiheessa oli kuitenkin toteuttaa idea alusta loppuun - jota myös tein. Puhdasta HTML:ää, CSS:ää ja JavaScriptiä - ei kirjastoja.",
-    "sv": "Ett enkelt manuellt brädspel, baserat på det gamla finska spelet Afrikas stjärna. Det här var den första webbapplikationen jag skrev efter att jag började med JavaScript i början av 2017, så koden blev verkligen inte vacker! Det viktigaste i det här skedet för mig var ändå att implementera en idé från början till slut - vilket jag också gjorde. Enbart HTML, CSS och JavaScript - inga bibliotek." 
+    "sv": "Ett enkelt manuellt brädspel, baserat på det gamla finska spelet Afrikas stjärna. Det här var den första webbapplikationen jag skrev efter att jag började med JavaScript i början av 2017, så koden blev verkligen inte vacker! Det viktigaste i det här skedet för mig var ändå att implementera en idé från början till slut - vilket jag också gjorde. Enbart HTML, CSS och JavaScript - inga bibliotek."
+  },
+  {
+    "id": "portfolio4",
+    "en": "HSL App",
+    "fi": "HSL App",
+    "sv": "HSL App"
+  },
+  {
+    "id": "portfolio4Desc",
+    "en": "Show selected public transport stops in Helsinki",
+    "fi": "Näytä Helsingin pysäkkejä",
+    "sv": "Visa hållplatser i Helsingfors regiontrafik"
+  },
+  {
+    "id": "portfolio4FullText",
+    "en": "Find and maintain your favourite Helsinki stops. Fetches data from the open HSL API. Technologies: React, Redux, redux-thunk, TypeScript, Jest.",
+    "fi": "Hae ja ylläpidä suosikkipysäkkejäsi Helsingissä. Hakee dataa avoimesta HSL API:sta. Teknologiat: React, Redux, redux-thunk, TypeScript, Jest.",
+    "sv": "Sök och upprätthåll en lista på dina favorithållplatser i Helsingfors. Använder data från HSL:s öppna API. Teknologier: React, Redux, redux-thunk, TypeScript, Jest."
   }
 ]

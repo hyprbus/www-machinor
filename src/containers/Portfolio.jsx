@@ -7,8 +7,17 @@ import PortfolioSection from '../components/PortfolioSection';
 import Avocado from '../images/avocado.svg';
 import Game from '../images/game.svg';
 import Invader from '../images/spaceinvader.svg';
+import Bus from '../images/bus.svg';
 
 const portfolioData = [
+  {
+    image: Bus,
+    header: 'portfolio4',
+    summary: 'portfolio4Desc',
+    description: 'portfolio4FullText',
+    site: 'http://hsl-app.azurewebsites.net/',
+    sourceCode: 'https://github.com/hyprbus/hsl-app',
+  },
   {
     image: Avocado,
     header: 'portfolio1',
