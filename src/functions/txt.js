@@ -4,7 +4,8 @@
 // element found, element not found, 2 or more elements found
 
 export default function txt(objArray, id) {
-  let textObj = objArray.find(element => element.id === id)
-  let text = textObj == null ? "content missing for element id: " + id: textObj.text
-  return text
+  const textObj = objArray.find(element => element.id === id);
+  const text =
+    textObj == null ? `content missing for element id: ${id}` : textObj.text;
+  return text;
 }

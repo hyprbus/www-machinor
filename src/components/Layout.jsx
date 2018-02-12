@@ -16,31 +16,40 @@ import txt from '../functions/txt';
 const Layout = (props) => {
   const { siteStyle } = props;
   const { content } = props;
-  if (content.length === 0) { return null; }
+  if (content.length === 0) {
+    return null;
+  }
+  const translate = tag => txt(content, tag);
   return (
-    <ThemeProvider theme={{ mode: siteStyle, responsivity: 'responsivityA', spacing: 'normal' }}>
+    <ThemeProvider
+      theme={{
+        mode: siteStyle,
+        responsivity: 'responsivityA',
+        spacing: 'normal',
+      }}
+    >
       <Page>
         <Row>
-          <Column small kind="complement" >
+          <Column small kind="complement">
             <Logo />
           </Column>
           <Column kind="complement" center>
-            <Contact contactType="mail" contact={txt(content, 'email')}>
-              <Text compact text={txt(content, 'email')} align="center" />
+            <Contact contactType="mail" contact={translate('email')}>
+              <Text compact text={translate('email')} align="center" />
             </Contact>
           </Column>
           <Column kind="complement" center>
-            <Contact contactType="phone" contact={txt(content, 'phone')}>
-              <Text compact text={txt(content, 'phone')} align="center" />
+            <Contact contactType="phone" contact={translate('phone')}>
+              <Text compact text={translate('phone')} align="center" />
             </Contact>
           </Column>
           <Column kind="complement" center>
-            <Text compact text={txt(content, 'company')} align="center" />
+            <Text compact text={translate('company')} align="center" />
           </Column>
         </Row>
         <Row>
           <Column tablet kind="complement">
-            <Heading text={txt(content, 'slogan')} extraLarge />
+            <Heading text={translate('slogan')} extraLarge />
             <SelectorGroup
               id="languageSelector"
               selectors={props.langSelectors}
@@ -55,39 +64,36 @@ const Layout = (props) => {
             />
           </Column>
           <Column kind="fx">
-            <Heading text={txt(content, 'aboutHeader')} />
-            <Text text={txt(content, 'aboutTxt1')} />
-            <Text text={txt(content, 'aboutTxt2')} />
+            <Heading text={translate('aboutHeader')} />
+            <Text text={translate('aboutTxt1')} />
+            <Text text={translate('aboutTxt2')} />
           </Column>
           <Column kind="default">
-            <Heading text={txt(content, 'techSkillsHeader')} />
-            <Text text={txt(content, 'techSkills')} />
-            <Text text={txt(content, 'aboutTxt3')} />
+            <Heading text={translate('techSkillsHeader')} />
+            <Text text={translate('techSkills')} />
+            <Text text={translate('aboutTxt3')} />
           </Column>
           <Column kind="default">
-            <Heading text={txt(content, 'langSkillsHeader')} />
-            <Text text={txt(content, 'langSkills')} />
-            <Heading text={txt(content, 'educationHeader')} />
-            <Text text={txt(content, 'educationText')} />
-            <Heading text={txt(content, 'otherSkillsHeader')} />
-            <Text text={txt(content, 'otherSkills1')} />
-            <Text text={txt(content, 'otherSkills2')} />
-            <Text text={txt(content, 'otherSkills3')} />
+            <Heading text={translate('langSkillsHeader')} />
+            <Text text={translate('langSkills')} />
+            <Heading text={translate('educationHeader')} />
+            <Text text={translate('educationText')} />
+            <Heading text={translate('otherSkillsHeader')} />
+            <Text text={translate('otherSkills1')} />
+            <Text text={translate('otherSkills2')} />
+            <Text text={translate('otherSkills3')} />
           </Column>
         </Row>
         <Row>
           <Column kind="complement">
             <Heading
-              text={txt(content, 'portfolioHeader')}
+              text={translate('portfolioHeader')}
               align="center"
               large
             />
           </Column>
         </Row>
-        <Portfolio
-          content={content}
-          showModal={props.showModal}
-        />
+        <Portfolio content={content} showModal={props.showModal} />
         <Modal
           visible={props.modalVisible}
           header={props.modalHeader}
